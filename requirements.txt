@@ -1,0 +1,4 @@
+pillow
+gtts
+requests
+requests-oauthlib
