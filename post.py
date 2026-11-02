@@ -107,16 +107,24 @@ def tiktok(v):
     wanted = CONFIG.get("tiktok_privacy", "PUBLIC_TO_EVERYONE")
     privacy = wanted if wanted in options else ("SELF_ONLY" if "SELF_ONLY" in options else options[0])
     size = os.path.getsize(v["video"])
-    init = check(requests.post("https://open.tiktokapis.com/v2/post/publish/video/init/", headers=h, json={
+    source = {"source": "FILE_UPLOAD", "video_size": size, "chunk_size": size, "total_chunk_count": 1}
+    r = requests.post("https://open.tiktokapis.com/v2/post/publish/video/init/", headers=h, json={
         "post_info": {"title": caption(v)[:2000], "privacy_level": privacy, "disable_comment": False},
-        "source_info": {"source": "FILE_UPLOAD", "video_size": size, "chunk_size": size, "total_chunk_count": 1}}))
-    data = init.get("data", {})
+        "source_info": source})
+    how = f"posted (privacy: {privacy})"
+    if "unaudited_client" in r.text:
+        # Until TikTok approves the app, send it to your TikTok inbox instead: open TikTok, tap the
+        # notification, and post it yourself in one tap (you can also add a trending sound there).
+        r = requests.post("https://open.tiktokapis.com/v2/post/publish/inbox/video/init/", headers=h,
+                          json={"source_info": source})
+        how = "sent to your TikTok inbox - open TikTok and tap the notification to post it"
+    data = check(r).get("data", {})
     with open(v["video"], "rb") as f:
         r = requests.put(data["upload_url"], data=f, headers={
             "Content-Type": "video/mp4", "Content-Range": f"bytes 0-{size - 1}/{size}", "Content-Length": str(size)})
     if r.status_code >= 400:
         raise RuntimeError(f"TikTok upload failed: HTTP {r.status_code} {r.text[:200]}")
-    return f"sent to TikTok (privacy: {privacy})"
+    return how
 
 
 # ---------------- X (Twitter) ----------------
