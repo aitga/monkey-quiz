@@ -309,7 +309,23 @@ def main():
     number = int(state.get("next_number", 13))
 
     made = []
-    for _ in range(int(config.get("videos_per_day", 2))):
+    per_day = int(config.get("videos_per_day", 2))
+
+    # 1) Your own finished videos (made with Argon etc.) uploaded into the ready/ folder go first.
+    #    Optional: a .txt file with the same name holds the caption (first line = question/title).
+    ready = sorted(f for f in os.listdir("ready") if f.lower().endswith((".mp4", ".mov"))) if os.path.isdir("ready") else []
+    for name in ready[:per_day]:
+        src = os.path.join("ready", name)
+        base = os.path.splitext(src)[0]
+        text = open(base + ".txt").read().strip() if os.path.exists(base + ".txt") else ""
+        video = os.path.join(OUT, f"quiz_{number}.mp4")
+        subprocess.run(["cp", src, video], check=True)
+        print("Using your own video", src, "as quiz", number)
+        made.append({"number": number, "country": country, "question": text or f"Can you answer quiz {number}?",
+                     "video": video, "thumbnail": "", "source": src})
+        number += 1
+
+    for _ in range(per_day - len(made)):
         quiz = dict(pool[used.get(country, 0) % len(pool)])
         used[country] = used.get(country, 0) + 1
         quiz["number"] = number

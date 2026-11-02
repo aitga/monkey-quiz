@@ -177,6 +177,13 @@ def main():
     if summary:
         open(summary, "a").write("\n".join(lines) + "\n")
     print("\n".join(lines))
+    # your own videos from ready/ are removed after posting so they are not posted twice
+    for v in manifest["videos"]:
+        src = v.get("source")
+        if src:
+            for path in (src, os.path.splitext(src)[0] + ".txt"):
+                if os.path.exists(path):
+                    subprocess.run(["git", "rm", "-q", path])
 
 
 if __name__ == "__main__":
