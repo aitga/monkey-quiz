@@ -2,3 +2,4 @@ pillow
 gtts
 requests
 requests-oauthlib
+edge-tts

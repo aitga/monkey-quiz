@@ -15,6 +15,7 @@ OUT = "out"
 LETTERS = "ABCD"
 COUNTDOWN = 5
 INTRO = 2.5
+CONFIG = json.load(open("config.json")) if os.path.exists("config.json") else {}
 MIN_LEN, MAX_LEN = 20, 40  # video length in seconds
 
 
@@ -185,6 +186,17 @@ def monkey(d, cx, cy):
     d.ellipse([cx + 175, cy + 200, cx + 245, cy + 270], fill=fur)
 
 
+def monkey_layer():
+    """The host as a see-through picture: your images/monkey.png, or the simple drawn monkey."""
+    if MONKEY_FILE:
+        m = Image.open(MONKEY_FILE).convert("RGBA")
+        m.thumbnail((440, 500))
+        return m
+    m = Image.new("RGBA", (560, 720), (0, 0, 0, 0))
+    monkey(ImageDraw.Draw(m), 280, 250)
+    return m.resize((380, 489), Image.LANCZOS)
+
+
 def frame(bg, quiz, options, answer_idx, mode, count=None):
     img = bg.copy()
     d = ImageDraw.Draw(img)
@@ -193,7 +205,6 @@ def frame(bg, quiz, options, answer_idx, mode, count=None):
     if mode == "intro":
         outlined(d, (W / 2, 1020), "Can you answer", font(80, True), (255, 255, 255), width=6)
         outlined(d, (W / 2, 1120), "this one?", font(80, True), (255, 255, 255), width=6)
-        monkey(d, 300, 1650)
         return img
     if mode == "answer":
         scroll(d, (110, 380, 970, 760), f"Answer: {LETTERS[answer_idx]}. {quiz['fact']}", 54)
@@ -215,7 +226,6 @@ def frame(bg, quiz, options, answer_idx, mode, count=None):
             f = font(f.size - 4)
         d.text((250, y + 63), opt, font=f, fill=txt, anchor="lm")
         y += 150
-    monkey(d, 300, 1650)
     if count is not None:
         d.ellipse([700, 1480, 960, 1740], fill=(245, 196, 50), outline=(60, 30, 10), width=10)
         d.text((830, 1610), str(count), font=font(150), fill=(60, 30, 10), anchor="mm")
@@ -237,11 +247,21 @@ def duration(path):
 
 
 def speak(text, path, fallback_seconds):
+    """Natural neural voice (free Microsoft Edge voices); falls back to Google voice, then silence."""
+    voice = CONFIG.get("voice", "en-US-GuyNeural")
+    try:
+        import asyncio
+        import edge_tts
+        asyncio.run(edge_tts.Communicate(text, voice, rate=CONFIG.get("voice_speed", "+6%")).save(path))
+        if os.path.getsize(path) > 1000:
+            return
+    except Exception as e:
+        print("Edge voice failed, trying Google voice:", e)
     try:
         from gtts import gTTS
         gTTS(text, lang="en").save(path)
         return
-    except Exception as e:  # no voice available: use silence instead
+    except Exception as e:
         print("Voice failed, using silence:", e)
     run(["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono", "-t", str(fallback_seconds), path])
 
@@ -252,40 +272,72 @@ def make_video(quiz, workdir, video_path, thumb_path):
     rnd.shuffle(order)
     options = [quiz["options"][i] for i in order]
     answer_idx = order.index(0)  # the first option in quizzes.json is always the right one
+    L, right = LETTERS[answer_idx], options[answer_idx]
+
+    # layer 1: the landmark photo (slow cinematic zoom)
     bg, credit = background(quiz)
-    if credit:
-        ImageDraw.Draw(bg).text((W - 20, H - 12), credit, font=font(22), fill=(255, 255, 255), anchor="rd",
-                                stroke_width=2, stroke_fill=(0, 0, 0))
+    bg.resize((W * 3 // 2, H * 3 // 2), Image.LANCZOS).save(os.path.join(workdir, "bg.png"))
+    # layer 2: see-through quiz graphics that change over time
+    clear = Image.new("RGBA", (W, H), (0, 0, 0, 0))
 
-    frames = [("i.png", frame(bg, quiz, options, answer_idx, "intro")),
-              ("q.png", frame(bg, quiz, options, answer_idx, "question"))]
-    for c in range(COUNTDOWN, 0, -1):
-        frames.append((f"c{c}.png", frame(bg, quiz, options, answer_idx, "count", c)))
-    frames.append(("a.png", frame(bg, quiz, options, answer_idx, "answer")))
-    for name, im in frames:
+    def ui(mode, count=None):
+        im = frame(clear, quiz, options, answer_idx, mode, count)
+        if credit:
+            ImageDraw.Draw(im).text((W - 20, H - 12), credit, font=font(22), fill=(255, 255, 255), anchor="rd",
+                                    stroke_width=2, stroke_fill=(0, 0, 0))
+        return im
+
+    layers = [("i.png", ui("intro")), ("q.png", ui("question"))]
+    layers += [(f"c{c}.png", ui("count", c)) for c in range(COUNTDOWN, 0, -1)]
+    layers.append(("a.png", ui("answer")))
+    for name, im in layers:
         im.save(os.path.join(workdir, name))
-    frames[1][1].convert("RGB").save(thumb_path, quality=92)
+    # layer 3: the monkey host (bobs while talking)
+    host = monkey_layer()
+    host.save(os.path.join(workdir, "monkey.png"))
+    thumb = bg.convert("RGBA")
+    thumb.alpha_composite(host, (30, H - host.height))
+    thumb.alpha_composite(layers[1][1])
+    thumb.convert("RGB").save(thumb_path, quality=92)
 
-    q_audio, a_audio = os.path.join(workdir, "q.mp3"), os.path.join(workdir, "a.mp3")
-    opts = ". ".join(f"{LETTERS[i]}: {o}" for i, o in enumerate(options))
-    speak(f"Quiz {quiz['number']}! {quiz['question']} {opts}. You have five seconds!", q_audio, 8)
-    speak(f"The answer is {LETTERS[answer_idx]}: {options[answer_idx]}! {quiz['fact']}", a_audio, 5)
-    q_len = duration(q_audio) + 0.5
-    a_len = max(duration(a_audio) + 1.5, 4.0, MIN_LEN - (INTRO + q_len + COUNTDOWN))
+    # the host's lines, like a street interviewer
+    c = quiz["country"]
+    hook_a, q_audio, a_audio = (os.path.join(workdir, n) for n in ("h.mp3", "q.mp3", "a.mp3"))
+    opts = "... ".join(f"{LETTERS[i]}, {o}" for i, o in enumerate(options))
+    speak(quiz.get("hook") or f"Hey you! Yes, you... Quick question about {c}. Let's see if you really know it!", hook_a, 3)
+    speak(f"Alright, quiz {quiz['number']}. {quiz['question']} Is it... {opts}? You've got five seconds!", q_audio, 8)
+    speak(f"Time's up! The answer is {L}... {right}! {quiz['fact']} Did you get it? Tell me in the comments!", a_audio, 5)
+    intro = max(duration(hook_a) + 0.4, 2.5)
+    q_len = duration(q_audio) + 0.4
+    a_len = max(duration(a_audio) + 1.2, 4.0, MIN_LEN - (intro + q_len + COUNTDOWN))
+    total = min(intro + q_len + COUNTDOWN + a_len, MAX_LEN)
+    t_count, t_ans = intro + q_len, intro + q_len + COUNTDOWN
 
     lst = os.path.join(workdir, "list.txt")
     with open(lst, "w") as f:
-        f.write(f"file 'i.png'\nduration {INTRO}\nfile 'q.png'\nduration {q_len:.2f}\n")
-        for c in range(COUNTDOWN, 0, -1):
-            f.write(f"file 'c{c}.png'\nduration 1\n")
+        f.write(f"file 'i.png'\nduration {intro:.2f}\nfile 'q.png'\nduration {q_len:.2f}\n")
+        for n in range(COUNTDOWN, 0, -1):
+            f.write(f"file 'c{n}.png'\nduration 1\n")
         f.write(f"file 'a.png'\nduration {a_len:.2f}\nfile 'a.png'\n")
-    total = min(INTRO + q_len + COUNTDOWN + a_len, MAX_LEN)
-    d1 = int(INTRO * 1000)
-    delay = int((INTRO + q_len + COUNTDOWN) * 1000)
-    run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", lst, "-i", q_audio, "-i", a_audio,
-         "-filter_complex", f"[1:a]adelay=delays={d1}:all=1[a1];[2:a]adelay=delays={delay}:all=1[a2];[a1][a2]amix=inputs=2:duration=longest:normalize=0,apad[aout]",
-         "-map", "0:v", "-map", "[aout]", "-t", f"{total:.2f}", "-vf", "fps=30,format=yuv420p",
-         "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-c:a", "aac", "-b:a", "128k", "-ar", "44100",
+
+    talk = f"between(t,0.2,{intro:.2f})+between(t,{intro:.2f},{t_count:.2f})+between(t,{t_ans:.2f},{t_ans + a_len - 1:.2f})"
+    ms = lambda t: int(t * 1000)
+    graph = (
+        f"[0:v]zoompan=z='min(1+0.0006*in,1.25)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps=30[bgv];"
+        f"[2:v]format=rgba[m];[bgv][m]overlay=x=30:y='H-h+20-16*abs(sin(t*7))*gt({talk},0)'[v1];"
+        f"[1:v]fps=30,format=rgba[ui];[v1][ui]overlay=0:0,format=yuv420p[v];"
+        f"[3:a]adelay={ms(0.2)}:all=1[h];[4:a]adelay={ms(intro)}:all=1[q];[5:a]adelay={ms(t_ans)}:all=1[a];"
+        f"aevalsrc='0.35*sin(2*PI*1400*t)*lt(mod(t,1),0.05)':d={COUNTDOWN}:s=44100,adelay={ms(t_count)}:all=1[tick];"
+        f"aevalsrc='0.45*(sin(2*PI*1320*t)+0.5*sin(2*PI*1980*t))*exp(-3*t)':d=1.5:s=44100,adelay={ms(t_ans)}:all=1[ding];"
+        f"aevalsrc='0.25*sin(2*PI*(200+900*t)*t)*exp(-5*t)':d=0.6:s=44100[whoosh];"
+        f"[h][q][a][tick][ding][whoosh]amix=inputs=6:duration=longest:normalize=0,apad[aout]"
+    )
+    run(["ffmpeg", "-y", "-loop", "1", "-framerate", "30", "-i", os.path.join(workdir, "bg.png"),
+         "-f", "concat", "-safe", "0", "-i", lst,
+         "-loop", "1", "-framerate", "30", "-i", os.path.join(workdir, "monkey.png"),
+         "-i", hook_a, "-i", q_audio, "-i", a_audio,
+         "-filter_complex", graph, "-map", "[v]", "-map", "[aout]", "-t", f"{total:.2f}",
+         "-c:v", "libx264", "-preset", "medium", "-crf", "21", "-c:a", "aac", "-b:a", "160k", "-ar", "44100",
          "-movflags", "+faststart", video_path])
 
 
