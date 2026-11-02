@@ -1,0 +1,75 @@
+name: Daily monkey quiz
+
+on:
+  schedule:
+    - cron: "23 2 * * *"   # every day at 02:23 UTC (09:23 in UTC+7)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: daily-quiz
+
+jobs:
+  make-videos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu-core
+      - run: pip install -r requirements.txt
+      - run: python make_videos.py
+      - id: upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: quiz-videos
+          path: out/
+          retention-days: 7
+      - run: |
+          echo "## 🎬 Today's videos are ready" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "[Watch them here](${{ steps.upload.outputs.artifact-url }}) (downloads a zip with the videos)." >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "If they look good, click **Review deployments** → tick **approval** → **Approve and deploy**." >> "$GITHUB_STEP_SUMMARY"
+
+  post-videos:
+    needs: make-videos
+    runs-on: ubuntu-latest
+    environment: approval
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: quiz-videos
+          path: out/
+      - name: Post videos
+        run: python post.py
+        env:
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+      - name: Remember which quiz is next
+        if: always()
+        run: |
+          git config user.name "monkey-quiz-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state.json
+          git commit -m "Next quiz pointer" || echo "nothing to save"
+          git push
