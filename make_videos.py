@@ -15,6 +15,7 @@ OUT = "out"
 LETTERS = "ABCD"
 COUNTDOWN = 5
 INTRO = 2.5
+MIN_LEN, MAX_LEN = 20, 40  # video length in seconds
 
 
 def font(size, serif=False):
@@ -62,15 +63,39 @@ def landmark_photo(quiz):
                 return Image.open(path).convert("RGB"), ""
     if not quiz.get("landmark"):
         return None, ""
+    ua = {"User-Agent": "MonkeyQuizBot/1.0 (https://github.com/" + os.environ.get("GITHUB_REPOSITORY", "") + ")"}
+    rnd = random.Random(f"{quiz['number']}-{quiz['landmark']}")
+    # 1) a real photograph (often with real people) from Wikimedia Commons
+    searches = [quiz["photo_search"]] if quiz.get("photo_search") else []
+    searches += [f"{quiz['landmark']} people", quiz["landmark"]]
+    for text in searches:
+        try:
+            r = requests.get("https://commons.wikimedia.org/w/api.php", headers=ua, timeout=30, params={
+                "action": "query", "generator": "search", "gsrsearch": f"{text} filetype:bitmap", "gsrnamespace": 6,
+                "gsrlimit": 20, "prop": "imageinfo", "iiprop": "url|size|mime|extmetadata", "iiurlwidth": 1600,
+                "format": "json"})
+            pages = r.json().get("query", {}).get("pages", {}).values()
+            good = []
+            for pg in pages:
+                ii = (pg.get("imageinfo") or [{}])[0]
+                if ii.get("mime") == "image/jpeg" and ii.get("width", 0) >= 1200 and ii.get("height", 0) >= 800:
+                    artist = ii.get("extmetadata", {}).get("Artist", {}).get("value", "")
+                    artist = "".join(ch for ch in __import__("re").sub("<[^>]+>", "", artist) if ch.isprintable())[:40]
+                    good.append((ii["thumburl"], artist))
+            if good:
+                url, artist = rnd.choice(good)
+                img = Image.open(io.BytesIO(requests.get(url, headers=ua, timeout=60).content)).convert("RGB")
+                return img, f"Photo: {artist or 'Wikimedia Commons'} / Wikimedia Commons"
+        except Exception as e:
+            print("Commons search failed:", e)
+    # 2) the main Wikipedia photo of the landmark
     try:
-        ua = {"User-Agent": "MonkeyQuizBot/1.0 (https://github.com/" + os.environ.get("GITHUB_REPOSITORY", "") + ")"}
         r = requests.get("https://en.wikipedia.org/w/api.php", headers=ua, timeout=30, params={
             "action": "query", "titles": quiz["landmark"], "prop": "pageimages", "piprop": "thumbnail",
             "pithumbsize": 1600, "redirects": 1, "format": "json"})
         page = next(iter(r.json()["query"]["pages"].values()))
-        url = page["thumbnail"]["source"]
-        img = Image.open(io.BytesIO(requests.get(url, headers=ua, timeout=60).content)).convert("RGB")
-        return img, "Photo: Wikipedia / Wikimedia Commons"
+        img = Image.open(io.BytesIO(requests.get(page["thumbnail"]["source"], headers=ua, timeout=60).content))
+        return img.convert("RGB"), "Photo: Wikipedia / Wikimedia Commons"
     except Exception as e:
         print("No landmark photo, using parchment:", e)
         return None, ""
@@ -122,8 +147,16 @@ def scroll(d, box, text, size=62):
         y += size + 14
 
 
+MONKEY_FILE = next((p for p in ("images/monkey.png", "images/monkey.webp", "images/monkey.jpg") if os.path.exists(p)), None)
+
+
 def monkey(d, cx, cy):
-    """An original cartoon monkey host with a cap and a microphone."""
+    """Your own monkey (images/monkey.png) if uploaded, otherwise a simple drawn monkey."""
+    if MONKEY_FILE:
+        m = Image.open(MONKEY_FILE).convert("RGBA")
+        m.thumbnail((560, 600))
+        d._image.paste(m, (int(cx - m.width / 2), H - m.height), m)
+        return
     fur, skin, dark = (120, 72, 38), (232, 186, 136), (40, 25, 15)
     d.ellipse([cx - 210, cy + 120, cx + 210, cy + 460], fill=fur)  # body
     d.ellipse([cx - 120, cy + 170, cx + 120, cy + 420], fill=skin)  # belly
@@ -238,7 +271,7 @@ def make_video(quiz, workdir, video_path, thumb_path):
     speak(f"Quiz {quiz['number']}! {quiz['question']} {opts}. You have five seconds!", q_audio, 8)
     speak(f"The answer is {LETTERS[answer_idx]}: {options[answer_idx]}! {quiz['fact']}", a_audio, 5)
     q_len = duration(q_audio) + 0.5
-    a_len = max(duration(a_audio) + 1.5, 4.0)
+    a_len = max(duration(a_audio) + 1.5, 4.0, MIN_LEN - (INTRO + q_len + COUNTDOWN))
 
     lst = os.path.join(workdir, "list.txt")
     with open(lst, "w") as f:
@@ -246,7 +279,7 @@ def make_video(quiz, workdir, video_path, thumb_path):
         for c in range(COUNTDOWN, 0, -1):
             f.write(f"file 'c{c}.png'\nduration 1\n")
         f.write(f"file 'a.png'\nduration {a_len:.2f}\nfile 'a.png'\n")
-    total = INTRO + q_len + COUNTDOWN + a_len
+    total = min(INTRO + q_len + COUNTDOWN + a_len, MAX_LEN)
     d1 = int(INTRO * 1000)
     delay = int((INTRO + q_len + COUNTDOWN) * 1000)
     run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", lst, "-i", q_audio, "-i", a_audio,
