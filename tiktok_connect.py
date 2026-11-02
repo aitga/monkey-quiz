@@ -8,7 +8,8 @@ import requests
 code = urllib.parse.unquote(os.environ["CODE"].strip())
 if "code=" in code:  # the whole address was pasted
     code = code.split("code=", 1)[1].split("&", 1)[0]
-redirect = f"https://github.com/{os.environ['GITHUB_REPOSITORY']}"
+owner, repo = os.environ["GITHUB_REPOSITORY"].split("/")
+redirect = f"https://{owner.lower()}.github.io/{repo}/"
 r = requests.post("https://open.tiktokapis.com/v2/oauth/token/", data={
     "client_key": os.environ["TIKTOK_CLIENT_KEY"].strip(), "client_secret": os.environ["TIKTOK_CLIENT_SECRET"].strip(),
     "code": code, "grant_type": "authorization_code", "redirect_uri": redirect})
