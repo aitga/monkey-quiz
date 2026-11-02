@@ -190,49 +190,77 @@ def monkey_layer():
     """The host as a see-through picture: your images/monkey.png, or the simple drawn monkey."""
     if MONKEY_FILE:
         m = Image.open(MONKEY_FILE).convert("RGBA")
-        m.thumbnail((440, 500))
+        m.thumbnail((560, 680))
         return m
     m = Image.new("RGBA", (560, 720), (0, 0, 0, 0))
     monkey(ImageDraw.Draw(m), 280, 250)
     return m.resize((380, 489), Image.LANCZOS)
 
 
+PILL_COLORS = [(245, 130, 40), (225, 70, 140), (240, 185, 30), (40, 170, 160)]
+NAVY = (22, 30, 66)
+
+
+def boxed_text(d, box, text, size, fill=NAVY, edge=(245, 196, 50), color=(255, 255, 255)):
+    x0, y0, x1, y1 = box
+    d.rounded_rectangle(box, 28, fill=fill, outline=edge, width=6)
+    f = font(size)
+    lines = wrap(d, text, f, x1 - x0 - 70)
+    while len(lines) * (size + 12) > (y1 - y0 - 40) and size > 34:
+        size -= 4
+        f = font(size)
+        lines = wrap(d, text, f, x1 - x0 - 70)
+    y = (y0 + y1) / 2 - len(lines) * (size + 12) / 2 + size / 2 + 4
+    for line in lines:
+        d.text(((x0 + x1) / 2, y), line, font=f, fill=color, anchor="mm")
+        y += size + 12
+
+
 def frame(bg, quiz, options, answer_idx, mode, count=None):
+    """Quiz graphics in the Monkey Unleashed style (drawn on a see-through layer)."""
     img = bg.copy()
     d = ImageDraw.Draw(img)
-    outlined(d, (W / 2, 140), f"QUIZ {quiz['number']}", font(150, True), (245, 196, 50), width=8)
-    outlined(d, (W / 2, 275), f"{quiz['country']} Week", font(58, True), (255, 240, 210), width=4)
+    title = f"QUIZ #{quiz['number']}"
+    sub = f"{quiz['country'].upper()} WEEK"
+    outlined(d, (W / 2, 120), title, font(120), (250, 205, 40), outline=(25, 20, 30), width=9)
+    outlined(d, (W / 2, 235), sub, font(64), (255, 255, 255), outline=(25, 20, 30), width=7)
     if mode == "intro":
-        outlined(d, (W / 2, 1020), "Can you answer", font(80, True), (255, 255, 255), width=6)
-        outlined(d, (W / 2, 1120), "this one?", font(80, True), (255, 255, 255), width=6)
+        outlined(d, (W / 2, 900), "Can you answer", font(88), (255, 255, 255), outline=(25, 20, 30), width=8)
+        outlined(d, (W / 2, 1010), "this one?", font(88), (250, 205, 40), outline=(25, 20, 30), width=8)
         return img
     if mode == "answer":
-        scroll(d, (110, 380, 970, 760), f"Answer: {LETTERS[answer_idx]}. {quiz['fact']}", 54)
+        boxed_text(d, (70, 320, 1010, 600), f"{quiz['fact']}", 50)
     else:
-        scroll(d, (110, 380, 970, 760), quiz["question"])
-    y = 830
+        boxed_text(d, (70, 320, 1010, 600), quiz["question"], 60)
+    # 2 x 2 answer pills
+    pw, ph, gap = 455, 120, 30
     for i, opt in enumerate(options):
-        fill, edge, txt = (250, 238, 210), (120, 80, 40), (60, 35, 15)
+        x = 70 + (i % 2) * (pw + gap)
+        y = 650 + (i // 2) * (ph + 28)
+        fill, txt, edge = (255, 255, 255), (30, 30, 40), (220, 220, 225)
         if mode == "answer":
             if i == answer_idx:
-                fill, edge, txt = (70, 170, 70), (20, 90, 20), (255, 255, 255)
+                fill, txt, edge = (60, 185, 80), (255, 255, 255), (255, 255, 255)
             else:
-                fill, txt = (215, 200, 170), (140, 120, 95)
-        d.rounded_rectangle([110, y, 970, y + 125], 35, fill=fill, outline=edge, width=6)
-        d.ellipse([130, y + 15, 225, y + 110], fill=(245, 196, 50), outline=edge, width=5)
-        d.text((177, y + 63), LETTERS[i], font=font(56), fill=(60, 35, 15), anchor="mm")
-        f = font(52)
-        while d.textlength(opt, font=f) > 700 and f.size > 30:
-            f = font(f.size - 4)
-        d.text((250, y + 63), opt, font=f, fill=txt, anchor="lm")
-        y += 150
+                fill, txt = (235, 235, 235), (150, 150, 155)
+        d.rounded_rectangle([x, y, x + pw, y + ph], 60, fill=fill, outline=edge, width=5)
+        d.ellipse([x + 14, y + 14, x + 106, y + 106], fill=PILL_COLORS[i])
+        d.text((x + 60, y + 61), LETTERS[i], font=font(54), fill=(255, 255, 255), anchor="mm")
+        f = font(46)
+        while d.textlength(opt, font=f) > pw - 140 and f.size > 26:
+            f = font(f.size - 3)
+        d.text((x + 122, y + 62), opt, font=f, fill=txt, anchor="lm")
     if count is not None:
-        d.ellipse([700, 1480, 960, 1740], fill=(245, 196, 50), outline=(60, 30, 10), width=10)
-        d.text((830, 1610), str(count), font=font(150), fill=(60, 30, 10), anchor="mm")
-    elif mode == "question":
-        outlined(d, (830, 1610), "?", font(220, True), (245, 196, 50))
-    outlined(d, (W / 2, 1860), "Comment your answer!" if mode != "answer" else "Follow for a new quiz every day!",
-             font(50), (255, 240, 210), width=4)
+        d.ellipse([830, 1500, 1050, 1720], fill=(255, 255, 255), outline=(25, 20, 30), width=10)
+        d.text((940, 1612), str(count), font=font(140), fill=(25, 20, 30), anchor="mm")
+    if mode == "answer":
+        outlined(d, (W / 2, 1870), "Follow Monkey Unleashed for daily quizzes!", font(38), (255, 255, 255),
+                 outline=(25, 20, 30), width=6)
+    else:
+        d.rounded_rectangle([660, 1250, 1060, 1400], 40, fill=(255, 255, 255), outline=(25, 20, 30), width=5)
+        d.polygon([(720, 1390), (660, 1460), (780, 1392)], fill=(255, 255, 255))
+        d.text((860, 1298), "What's YOUR answer?", font=font(31), fill=(25, 20, 30), anchor="mm")
+        d.text((860, 1352), "Comment below!", font=font(31), fill=(25, 20, 30), anchor="mm")
     return img
 
 
@@ -296,7 +324,7 @@ def make_video(quiz, workdir, video_path, thumb_path):
     host = monkey_layer()
     host.save(os.path.join(workdir, "monkey.png"))
     thumb = bg.convert("RGBA")
-    thumb.alpha_composite(host, (30, H - host.height))
+    thumb.alpha_composite(host, ((W - host.width) // 2 - 150, H - host.height))
     thumb.alpha_composite(layers[1][1])
     thumb.convert("RGB").save(thumb_path, quality=92)
 
@@ -324,7 +352,7 @@ def make_video(quiz, workdir, video_path, thumb_path):
     ms = lambda t: int(t * 1000)
     graph = (
         f"[0:v]zoompan=z='min(1+0.0006*in,1.25)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps=30[bgv];"
-        f"[2:v]format=rgba[m];[bgv][m]overlay=x=30:y='H-h+20-16*abs(sin(t*7))*gt({talk},0)'[v1];"
+        f"[2:v]format=rgba[m];[bgv][m]overlay=x='(W-w)/2-150':y='H-h+20-16*abs(sin(t*7))*gt({talk},0)'[v1];"
         f"[1:v]fps=30,format=rgba[ui];[v1][ui]overlay=0:0,format=yuv420p[v];"
         f"[3:a]adelay={ms(0.2)}:all=1[h];[4:a]adelay={ms(intro)}:all=1[q];[5:a]adelay={ms(t_ans)}:all=1[a];"
         f"aevalsrc='0.35*sin(2*PI*1400*t)*lt(mod(t,1),0.05)':d={COUNTDOWN}:s=44100,adelay={ms(t_count)}:all=1[tick];"
