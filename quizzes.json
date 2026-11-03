@@ -1,31 +1,506 @@
 [
-  {"country": "Morocco", "landmark": "Hassan II Mosque", "question": "This giant mosque by the ocean is in which Moroccan city?", "options": ["Casablanca", "Rabat", "Tangier", "Agadir"], "fact": "Its minaret is about 210 metres tall, one of the tallest in the world."},
-  {"country": "Morocco", "landmark": "Jemaa el-Fnaa", "question": "Jemaa el-Fnaa, the square full of storytellers, music and food stalls, is in which city?", "options": ["Marrakesh", "Fes", "Meknes", "Essaouira"], "fact": "UNESCO protects the traditions of this square as world heritage."},
-  {"country": "Morocco", "landmark": "Chefchaouen", "question": "Which Moroccan town is famous for its blue painted streets?", "options": ["Chefchaouen", "Ouarzazate", "Ifrane", "Tetouan"], "fact": "Chefchaouen sits in the Rif mountains and is called the Blue Pearl."},
-  {"country": "Morocco", "landmark": "University of al-Qarawiyyin", "question": "The oldest university still running in the world, founded in 859, is in which city?", "options": ["Fes", "Marrakesh", "Rabat", "Tangier"], "fact": "It was founded by a woman, Fatima al-Fihri."},
-  {"country": "Morocco", "landmark": "Tajine", "question": "What is a tagine?", "options": ["A clay pot and the dish cooked in it", "A type of carpet", "A musical instrument", "A desert tent"], "fact": "The tall cone lid keeps the food juicy while it cooks slowly."},
-  {"country": "Morocco", "landmark": "Ait Benhaddou", "question": "Which famous Moroccan clay village near Ouarzazate appears in many Hollywood movies?", "options": ["Ait Benhaddou", "Volubilis", "Kasbah of the Udayas", "Ifrane"], "fact": "Gladiator and Game of Thrones were filmed there."},
-  {"country": "Morocco", "landmark": "Volubilis", "question": "The ancient Roman city of Volubilis is near which Moroccan city?", "options": ["Meknes", "Agadir", "Oujda", "Laayoune"], "fact": "Volubilis was an important Roman town 2,000 years ago."},
-  {"country": "Morocco", "landmark": "Maghrebi mint tea", "question": "What is the famous traditional drink served to guests in Morocco?", "options": ["Mint green tea", "Coffee with milk", "Hibiscus juice", "Lemon soda"], "fact": "It is poured from high up to make foam on top."},
-  {"country": "Morocco", "landmark": "Ibn Battuta", "question": "Which famous explorer from Tangier travelled for about 30 years across Africa and Asia?", "options": ["Ibn Battuta", "Ibn Khaldun", "Marco Polo", "Tariq ibn Ziyad"], "fact": "He travelled even farther than Marco Polo."},
-  {"country": "Morocco", "landmark": "Strait of Gibraltar", "question": "Gibraltar is named after Tariq ibn Ziyad. What does Jabal Tariq mean?", "options": ["Mountain of Tariq", "River of Tariq", "Gate of Tariq", "City of Tariq"], "fact": "Tariq crossed from North Africa to Spain in the year 711."},
-  {"country": "Morocco", "landmark": "Couscous", "question": "On which day do many Moroccan families eat couscous together?", "options": ["Friday", "Monday", "Wednesday", "Saturday"], "fact": "Couscous is on UNESCO's list of world cultural heritage."},
-  {"country": "Morocco", "landmark": "Toubkal", "question": "What is the highest mountain in North Africa, found in Morocco?", "options": ["Toubkal", "Kilimanjaro", "Jebel Musa", "Mount Sinai"], "fact": "Toubkal in the Atlas mountains is 4,167 metres high."},
-  {"country": "Morocco", "landmark": "Morocco national football team", "question": "At the 2022 World Cup, Morocco became the first African team to reach which stage?", "options": ["Semi-finals", "Final", "Quarter-finals", "Round of 16"], "fact": "The Atlas Lions beat Spain and Portugal on the way."},
-  {"country": "Morocco", "landmark": "Berbers", "question": "What are the native people of North Africa called, whose language is official in Morocco?", "options": ["Amazigh", "Bedouin", "Nubian", "Maasai"], "fact": "Tamazight became an official language of Morocco in 2011."},
-
-  {"country": "Egypt", "landmark": "Great Pyramid of Giza", "question": "Which ancient wonder of the world is still standing in Egypt today?", "options": ["Great Pyramid of Giza", "Hanging Gardens", "Colossus of Rhodes", "Lighthouse of Alexandria"], "fact": "It is the only one of the Seven Wonders of the Ancient World still standing."},
-  {"country": "Egypt", "landmark": "Great Sphinx of Giza", "question": "The Great Sphinx has the body of a lion and the head of a...?", "options": ["Human", "Falcon", "Cat", "Ram"], "fact": "It is one of the largest statues ever carved from one rock."},
-  {"country": "Egypt", "landmark": "Mask of Tutankhamun", "question": "Which young pharaoh's tomb was found almost untouched in 1922?", "options": ["Tutankhamun", "Ramesses II", "Khufu", "Akhenaten"], "fact": "His famous golden mask weighs about 10 kilograms."},
-  {"country": "Egypt", "landmark": "Nile", "question": "Which river gave life to ancient Egypt?", "options": ["The Nile", "The Euphrates", "The Congo", "The Niger"], "fact": "The Nile is one of the longest rivers in the world."},
-  {"country": "Egypt", "landmark": "Abu Simbel", "question": "Which pharaoh built the giant temples of Abu Simbel?", "options": ["Ramesses II", "Tutankhamun", "Cleopatra", "Khufu"], "fact": "In the 1960s the temples were moved block by block to save them from a lake."},
-  {"country": "Egypt", "landmark": "Rosetta Stone", "question": "Which stone helped experts finally read Egyptian hieroglyphs?", "options": ["Rosetta Stone", "Moonstone", "Black Stone", "Stone of Scone"], "fact": "It has the same text written in three scripts."},
-  {"country": "Egypt", "landmark": "Cleopatra", "question": "Cleopatra was the last active ruler of which dynasty?", "options": ["Ptolemaic", "Tudor", "Ming", "Abbasid"], "fact": "After Cleopatra died in 30 BC, Egypt became part of Rome."},
-  {"country": "Egypt", "landmark": "Kushari", "question": "Which Egyptian street food mixes rice, pasta, lentils and tomato sauce?", "options": ["Koshari", "Falafel", "Shawarma", "Couscous"], "fact": "Koshari is often called Egypt's national dish."},
-  {"country": "Egypt", "landmark": "Valley of the Kings", "question": "Where were many pharaohs, including Tutankhamun, buried?", "options": ["Valley of the Kings", "Sinai", "Siwa Oasis", "Alexandria"], "fact": "More than 60 tombs have been found there."},
-  {"country": "Egypt", "landmark": "Suez Canal", "question": "Which canal in Egypt connects the Mediterranean Sea and the Red Sea?", "options": ["Suez Canal", "Panama Canal", "Kiel Canal", "Corinth Canal"], "fact": "It opened in 1869 and ships no longer had to sail around Africa."},
-  {"country": "Egypt", "landmark": "Umm Kulthum", "question": "Which legendary Egyptian singer was called the Star of the East?", "options": ["Umm Kulthum", "Fairuz", "Warda", "Dalida"], "fact": "Millions across the Arab world listened to her monthly concerts on the radio."},
-  {"country": "Egypt", "landmark": "Mohamed Salah", "question": "Which Egyptian football star is nicknamed the Egyptian King?", "options": ["Mohamed Salah", "Ahmed Hassan", "Mohamed Elneny", "Hossam Hassan"], "fact": "Salah became a legend at Liverpool."},
-  {"country": "Egypt", "landmark": "Bibliotheca Alexandrina", "question": "Which Egyptian city had the most famous library of the ancient world?", "options": ["Alexandria", "Cairo", "Luxor", "Aswan"], "fact": "A new great library opened there in 2002."},
-  {"country": "Egypt", "landmark": "Karnak", "question": "Karnak, one of the largest temple complexes ever built, is in which city?", "options": ["Luxor", "Cairo", "Alexandria", "Port Said"], "fact": "It was built and expanded over about 2,000 years."}
+ {
+  "country": "Morocco",
+  "landmark": "Hassan II Mosque",
+  "question": "This giant mosque by the ocean is in which Moroccan city?",
+  "options": [
+   "Casablanca",
+   "Rabat",
+   "Tangier",
+   "Agadir"
+  ],
+  "fact": "Its minaret is about 210 metres tall, one of the tallest in the world."
+ },
+ {
+  "country": "Morocco",
+  "landmark": "Jemaa el-Fnaa",
+  "question": "Jemaa el-Fnaa, the square full of storytellers, music and food stalls, is in which city?",
+  "options": [
+   "Marrakesh",
+   "Fes",
+   "Meknes",
+   "Essaouira"
+  ],
+  "fact": "UNESCO protects the traditions of this square as world heritage."
+ },
+ {
+  "country": "Morocco",
+  "landmark": "Chefchaouen",
+  "question": "Which Moroccan town is famous for its blue painted streets?",
+  "options": [
+   "Chefchaouen",
+   "Ouarzazate",
+   "Ifrane",
+   "Tetouan"
+  ],
+  "fact": "Chefchaouen sits in the Rif mountains and is called the Blue Pearl."
+ },
+ {
+  "country": "Morocco",
+  "landmark": "University of al-Qarawiyyin",
+  "question": "The oldest university still running in the world, founded in 859, is in which city?",
+  "options": [
+   "Fes",
+   "Marrakesh",
+   "Rabat",
+   "Tangier"
+  ],
+  "fact": "It was founded by a woman, Fatima al-Fihri."
+ },
+ {
+  "country": "Morocco",
+  "landmark": "Tajine",
+  "question": "What is a tagine?",
+  "options": [
+   "A clay pot and the dish cooked in it",
+   "A type of carpet",
+   "A musical instrument",
+   "A desert tent"
+  ],
+  "fact": "The tall cone lid keeps the food juicy while it cooks slowly."
+ },
+ {
+  "country": "Morocco",
+  "landmark": "Ait Benhaddou",
+  "question": "Which famous Moroccan clay village near Ouarzazate appears in many Hollywood movies?",
+  "options": [
+   "Ait Benhaddou",
+   "Volubilis",
+   "Kasbah of the Udayas",
+   "Ifrane"
+  ],
+  "fact": "Gladiator and Game of Thrones were filmed there."
+ },
+ {
+  "country": "Morocco",
+  "landmark": "Volubilis",
+  "question": "The ancient Roman city of Volubilis is near which Moroccan city?",
+  "options": [
+   "Meknes",
+   "Agadir",
+   "Oujda",
+   "Laayoune"
+  ],
+  "fact": "Volubilis was an important Roman town 2,000 years ago."
+ },
+ {
+  "country": "Morocco",
+  "landmark": "Maghrebi mint tea",
+  "question": "What is the famous traditional drink served to guests in Morocco?",
+  "options": [
+   "Mint green tea",
+   "Coffee with milk",
+   "Hibiscus juice",
+   "Lemon soda"
+  ],
+  "fact": "It is poured from high up to make foam on top."
+ },
+ {
+  "country": "Morocco",
+  "landmark": "Ibn Battuta",
+  "question": "Which famous explorer from Tangier travelled for about 30 years across Africa and Asia?",
+  "options": [
+   "Ibn Battuta",
+   "Ibn Khaldun",
+   "Marco Polo",
+   "Tariq ibn Ziyad"
+  ],
+  "fact": "He travelled even farther than Marco Polo."
+ },
+ {
+  "country": "Morocco",
+  "landmark": "Strait of Gibraltar",
+  "question": "Gibraltar is named after Tariq ibn Ziyad. What does Jabal Tariq mean?",
+  "options": [
+   "Mountain of Tariq",
+   "River of Tariq",
+   "Gate of Tariq",
+   "City of Tariq"
+  ],
+  "fact": "Tariq crossed from North Africa to Spain in the year 711."
+ },
+ {
+  "country": "Morocco",
+  "landmark": "Couscous",
+  "question": "On which day do many Moroccan families eat couscous together?",
+  "options": [
+   "Friday",
+   "Monday",
+   "Wednesday",
+   "Saturday"
+  ],
+  "fact": "Couscous is on UNESCO's list of world cultural heritage."
+ },
+ {
+  "country": "Morocco",
+  "landmark": "Toubkal",
+  "question": "What is the highest mountain in North Africa, found in Morocco?",
+  "options": [
+   "Toubkal",
+   "Kilimanjaro",
+   "Jebel Musa",
+   "Mount Sinai"
+  ],
+  "fact": "Toubkal in the Atlas mountains is 4,167 metres high."
+ },
+ {
+  "country": "Morocco",
+  "landmark": "Morocco national football team",
+  "question": "At the 2022 World Cup, Morocco became the first African team to reach which stage?",
+  "options": [
+   "Semi-finals",
+   "Final",
+   "Quarter-finals",
+   "Round of 16"
+  ],
+  "fact": "The Atlas Lions beat Spain and Portugal on the way."
+ },
+ {
+  "country": "Morocco",
+  "landmark": "Berbers",
+  "question": "What are the native people of North Africa called, whose language is official in Morocco?",
+  "options": [
+   "Amazigh",
+   "Bedouin",
+   "Nubian",
+   "Maasai"
+  ],
+  "fact": "Tamazight became an official language of Morocco in 2011."
+ },
+ {
+  "country": "USA",
+  "landmark": "Statue of Liberty",
+  "question": "The Statue of Liberty was a gift to the USA from which country?",
+  "options": [
+   "France",
+   "England",
+   "Spain",
+   "Italy"
+  ],
+  "fact": "It was dedicated in New York Harbor in 1886."
+ },
+ {
+  "country": "USA",
+  "landmark": "Grand Canyon",
+  "question": "Which river carved the Grand Canyon?",
+  "options": [
+   "Colorado River",
+   "Mississippi River",
+   "Missouri River",
+   "Hudson River"
+  ],
+  "fact": "In places the canyon is more than a mile deep."
+ },
+ {
+  "country": "USA",
+  "landmark": "Mount Rushmore",
+  "question": "How many presidents' faces are carved on Mount Rushmore?",
+  "options": [
+   "Four",
+   "Three",
+   "Five",
+   "Six"
+  ],
+  "fact": "Washington, Jefferson, Theodore Roosevelt and Lincoln."
+ },
+ {
+  "country": "USA",
+  "landmark": "Golden Gate Bridge",
+  "question": "The Golden Gate Bridge is in which city?",
+  "options": [
+   "San Francisco",
+   "Los Angeles",
+   "Seattle",
+   "San Diego"
+  ],
+  "fact": "It opened in 1937 and its color is called International Orange."
+ },
+ {
+  "country": "USA",
+  "landmark": "Hollywood Sign",
+  "question": "What did the Hollywood sign say when it was first built?",
+  "options": [
+   "Hollywoodland",
+   "Hollywood City",
+   "Holly Hills",
+   "Hollywood Studios"
+  ],
+  "fact": "It was built in 1923 to advertise new houses. The word land was removed in 1949."
+ },
+ {
+  "country": "USA",
+  "landmark": "White House",
+  "question": "Which president was the first to live in the White House?",
+  "options": [
+   "John Adams",
+   "George Washington",
+   "Thomas Jefferson",
+   "Abraham Lincoln"
+  ],
+  "fact": "John Adams moved in in the year 1800."
+ },
+ {
+  "country": "USA",
+  "landmark": "Thanksgiving",
+  "question": "Which bird do most American families eat at Thanksgiving?",
+  "options": [
+   "Turkey",
+   "Chicken",
+   "Duck",
+   "Goose"
+  ],
+  "fact": "Thanksgiving is celebrated on the fourth Thursday of November."
+ },
+ {
+  "country": "USA",
+  "landmark": "Super Bowl",
+  "question": "The Super Bowl is the big final game of which sport?",
+  "options": [
+   "American football",
+   "Baseball",
+   "Basketball",
+   "Ice hockey"
+  ],
+  "fact": "It is one of the most watched TV events in the USA every year."
+ },
+ {
+  "country": "USA",
+  "landmark": "Times Square",
+  "question": "Where does New York's famous New Year's Eve ball drop happen?",
+  "options": [
+   "Times Square",
+   "Union Square",
+   "Washington Square",
+   "Madison Square"
+  ],
+  "fact": "The ball drop tradition started in 1907."
+ },
+ {
+  "country": "USA",
+  "landmark": "Apollo 11",
+  "question": "In which year did American astronauts first walk on the Moon?",
+  "options": [
+   "1969",
+   "1959",
+   "1975",
+   "1981"
+  ],
+  "fact": "Neil Armstrong and Buzz Aldrin walked on the Moon in July 1969."
+ },
+ {
+  "country": "USA",
+  "landmark": "Lincoln Memorial",
+  "question": "Who gave the famous I Have a Dream speech at the Lincoln Memorial in 1963?",
+  "options": [
+   "Martin Luther King Jr.",
+   "Malcolm X",
+   "Barack Obama",
+   "Rosa Parks"
+  ],
+  "fact": "About 250,000 people came to hear the speech."
+ },
+ {
+  "country": "USA",
+  "landmark": "French Quarter",
+  "question": "Jazz music was born in which American city?",
+  "options": [
+   "New Orleans",
+   "Chicago",
+   "Nashville",
+   "Detroit"
+  ],
+  "fact": "Jazz grew in New Orleans in the early 1900s."
+ },
+ {
+  "country": "USA",
+  "landmark": "Yellowstone National Park",
+  "question": "Which was the first national park in the world, created in 1872?",
+  "options": [
+   "Yellowstone",
+   "Yosemite",
+   "Grand Canyon",
+   "Everglades"
+  ],
+  "fact": "Yellowstone is home to the famous geyser Old Faithful."
+ },
+ {
+  "country": "USA",
+  "landmark": "Alaska Purchase",
+  "question": "From which country did the USA buy Alaska in 1867?",
+  "options": [
+   "Russia",
+   "Canada",
+   "Britain",
+   "Spain"
+  ],
+  "fact": "The USA paid 7.2 million dollars, about 2 cents per acre."
+ },
+ {
+  "country": "Egypt",
+  "landmark": "Great Pyramid of Giza",
+  "question": "Which ancient wonder of the world is still standing in Egypt today?",
+  "options": [
+   "Great Pyramid of Giza",
+   "Hanging Gardens",
+   "Colossus of Rhodes",
+   "Lighthouse of Alexandria"
+  ],
+  "fact": "It is the only one of the Seven Wonders of the Ancient World still standing."
+ },
+ {
+  "country": "Egypt",
+  "landmark": "Great Sphinx of Giza",
+  "question": "The Great Sphinx has the body of a lion and the head of a...?",
+  "options": [
+   "Human",
+   "Falcon",
+   "Cat",
+   "Ram"
+  ],
+  "fact": "It is one of the largest statues ever carved from one rock."
+ },
+ {
+  "country": "Egypt",
+  "landmark": "Mask of Tutankhamun",
+  "question": "Which young pharaoh's tomb was found almost untouched in 1922?",
+  "options": [
+   "Tutankhamun",
+   "Ramesses II",
+   "Khufu",
+   "Akhenaten"
+  ],
+  "fact": "His famous golden mask weighs about 10 kilograms."
+ },
+ {
+  "country": "Egypt",
+  "landmark": "Nile",
+  "question": "Which river gave life to ancient Egypt?",
+  "options": [
+   "The Nile",
+   "The Euphrates",
+   "The Congo",
+   "The Niger"
+  ],
+  "fact": "The Nile is one of the longest rivers in the world."
+ },
+ {
+  "country": "Egypt",
+  "landmark": "Abu Simbel",
+  "question": "Which pharaoh built the giant temples of Abu Simbel?",
+  "options": [
+   "Ramesses II",
+   "Tutankhamun",
+   "Cleopatra",
+   "Khufu"
+  ],
+  "fact": "In the 1960s the temples were moved block by block to save them from a lake."
+ },
+ {
+  "country": "Egypt",
+  "landmark": "Rosetta Stone",
+  "question": "Which stone helped experts finally read Egyptian hieroglyphs?",
+  "options": [
+   "Rosetta Stone",
+   "Moonstone",
+   "Black Stone",
+   "Stone of Scone"
+  ],
+  "fact": "It has the same text written in three scripts."
+ },
+ {
+  "country": "Egypt",
+  "landmark": "Cleopatra",
+  "question": "Cleopatra was the last active ruler of which dynasty?",
+  "options": [
+   "Ptolemaic",
+   "Tudor",
+   "Ming",
+   "Abbasid"
+  ],
+  "fact": "After Cleopatra died in 30 BC, Egypt became part of Rome."
+ },
+ {
+  "country": "Egypt",
+  "landmark": "Kushari",
+  "question": "Which Egyptian street food mixes rice, pasta, lentils and tomato sauce?",
+  "options": [
+   "Koshari",
+   "Falafel",
+   "Shawarma",
+   "Couscous"
+  ],
+  "fact": "Koshari is often called Egypt's national dish."
+ },
+ {
+  "country": "Egypt",
+  "landmark": "Valley of the Kings",
+  "question": "Where were many pharaohs, including Tutankhamun, buried?",
+  "options": [
+   "Valley of the Kings",
+   "Sinai",
+   "Siwa Oasis",
+   "Alexandria"
+  ],
+  "fact": "More than 60 tombs have been found there."
+ },
+ {
+  "country": "Egypt",
+  "landmark": "Suez Canal",
+  "question": "Which canal in Egypt connects the Mediterranean Sea and the Red Sea?",
+  "options": [
+   "Suez Canal",
+   "Panama Canal",
+   "Kiel Canal",
+   "Corinth Canal"
+  ],
+  "fact": "It opened in 1869 and ships no longer had to sail around Africa."
+ },
+ {
+  "country": "Egypt",
+  "landmark": "Umm Kulthum",
+  "question": "Which legendary Egyptian singer was called the Star of the East?",
+  "options": [
+   "Umm Kulthum",
+   "Fairuz",
+   "Warda",
+   "Dalida"
+  ],
+  "fact": "Millions across the Arab world listened to her monthly concerts on the radio."
+ },
+ {
+  "country": "Egypt",
+  "landmark": "Mohamed Salah",
+  "question": "Which Egyptian football star is nicknamed the Egyptian King?",
+  "options": [
+   "Mohamed Salah",
+   "Ahmed Hassan",
+   "Mohamed Elneny",
+   "Hossam Hassan"
+  ],
+  "fact": "Salah became a legend at Liverpool."
+ },
+ {
+  "country": "Egypt",
+  "landmark": "Bibliotheca Alexandrina",
+  "question": "Which Egyptian city had the most famous library of the ancient world?",
+  "options": [
+   "Alexandria",
+   "Cairo",
+   "Luxor",
+   "Aswan"
+  ],
+  "fact": "A new great library opened there in 2002."
+ },
+ {
+  "country": "Egypt",
+  "landmark": "Karnak",
+  "question": "Karnak, one of the largest temple complexes ever built, is in which city?",
+  "options": [
+   "Luxor",
+   "Cairo",
+   "Alexandria",
+   "Port Said"
+  ],
+  "fact": "It was built and expanded over about 2,000 years."
+ }
 ]
