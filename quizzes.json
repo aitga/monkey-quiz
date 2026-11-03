@@ -672,6 +672,846 @@
   "fact": "In Welsh it is called Y Ddraig Goch, the red dragon."
  },
  {
+  "country": "Australia",
+  "landmark": "Sydney Opera House",
+  "question": "The famous Opera House with sail-shaped roofs is in which city?",
+  "options": [
+   "Sydney",
+   "Melbourne",
+   "Brisbane",
+   "Perth"
+  ],
+  "fact": "It opened in 1973 and is a UNESCO World Heritage Site."
+ },
+ {
+  "country": "Australia",
+  "landmark": "Uluru",
+  "question": "Uluru, the giant red rock, is sacred to which people?",
+  "options": [
+   "Aboriginal Anangu people",
+   "Maori people",
+   "Inuit people",
+   "Zulu people"
+  ],
+  "fact": "Uluru rises about 348 metres above the desert."
+ },
+ {
+  "country": "Australia",
+  "landmark": "Great Barrier Reef",
+  "question": "The Great Barrier Reef is made mostly of what?",
+  "options": [
+   "Coral",
+   "Ice",
+   "Volcanic rock",
+   "Sand"
+  ],
+  "fact": "It is the largest coral reef system in the world."
+ },
+ {
+  "country": "Australia",
+  "landmark": "Kangaroo",
+  "question": "Which animal is on Australia's coat of arms together with the emu?",
+  "options": [
+   "Kangaroo",
+   "Koala",
+   "Wombat",
+   "Platypus"
+  ],
+  "fact": "Kangaroos and emus can't easily walk backwards, a symbol of moving forward."
+ },
+ {
+  "country": "Australia",
+  "landmark": "Parliament House, Canberra",
+  "question": "What is the capital city of Australia?",
+  "options": [
+   "Canberra",
+   "Sydney",
+   "Melbourne",
+   "Perth"
+  ],
+  "fact": "Canberra was built as a compromise between Sydney and Melbourne."
+ },
+ {
+  "country": "Australia",
+  "landmark": "Koala",
+  "question": "What do koalas mostly eat?",
+  "options": [
+   "Eucalyptus leaves",
+   "Bamboo",
+   "Grass",
+   "Insects"
+  ],
+  "fact": "Koalas can sleep up to 20 hours a day."
+ },
+ {
+  "country": "Australia",
+  "landmark": "Boomerang",
+  "question": "Which Aboriginal throwing tool can be made to fly back to you?",
+  "options": [
+   "Boomerang",
+   "Spear",
+   "Didgeridoo",
+   "Shield"
+  ],
+  "fact": "Aboriginal Australians used boomerangs for thousands of years."
+ },
+ {
+  "country": "Australia",
+  "landmark": "Didgeridoo",
+  "question": "The didgeridoo is a traditional Aboriginal...?",
+  "options": [
+   "Wind instrument",
+   "Drum",
+   "Boat",
+   "Weapon"
+  ],
+  "fact": "Players use circular breathing to play a non-stop sound."
+ },
+ {
+  "country": "Australia",
+  "landmark": "First Fleet",
+  "question": "In which year did the British First Fleet arrive in Australia?",
+  "options": [
+   "1788",
+   "1770",
+   "1801",
+   "1851"
+  ],
+  "fact": "The First Fleet arrived at Sydney Cove in 1788."
+ },
+ {
+  "country": "Australia",
+  "landmark": "Vegemite",
+  "question": "Vegemite is a famous Australian...?",
+  "options": [
+   "Spread",
+   "Drink",
+   "Dance",
+   "Sport"
+  ],
+  "fact": "It is a salty spread made from yeast extract, eaten on toast."
+ },
+ {
+  "country": "Australia",
+  "landmark": "Sydney Harbour Bridge",
+  "question": "What is the nickname of the Sydney Harbour Bridge?",
+  "options": [
+   "The Coathanger",
+   "The Big Arch",
+   "The Iron Lady",
+   "The Rainbow"
+  ],
+  "fact": "It opened in 1932."
+ },
+ {
+  "country": "Australia",
+  "landmark": "Platypus",
+  "question": "Which Australian mammal lays eggs?",
+  "options": [
+   "Platypus",
+   "Kangaroo",
+   "Koala",
+   "Wombat"
+  ],
+  "fact": "The platypus also has a duck-like bill."
+ },
+ {
+  "country": "Australia",
+  "landmark": "Bondi Beach",
+  "question": "Bondi Beach is in which Australian city?",
+  "options": [
+   "Sydney",
+   "Gold Coast",
+   "Perth",
+   "Adelaide"
+  ],
+  "fact": "Bondi has one of the oldest surf lifesaving clubs in the world."
+ },
+ {
+  "country": "Australia",
+  "landmark": "Outback",
+  "question": "What do Australians call their huge, dry inland area?",
+  "options": [
+   "The Outback",
+   "The Bush Land",
+   "The Red Zone",
+   "The Wild West"
+  ],
+  "fact": "Most Australians live on the coast, far from the Outback."
+ },
+ {
+  "country": "Ireland",
+  "landmark": "Cliffs of Moher",
+  "question": "On which coast of Ireland are the Cliffs of Moher?",
+  "options": [
+   "West coast",
+   "East coast",
+   "North coast",
+   "South coast"
+  ],
+  "fact": "The cliffs face the Atlantic Ocean in County Clare."
+ },
+ {
+  "country": "Ireland",
+  "landmark": "Saint Patrick's Day",
+  "question": "On which date is St Patrick's Day celebrated?",
+  "options": [
+   "March 17",
+   "July 4",
+   "October 31",
+   "December 26"
+  ],
+  "fact": "St Patrick is the patron saint of Ireland."
+ },
+ {
+  "country": "Ireland",
+  "landmark": "Ha'penny Bridge",
+  "question": "What is the capital city of Ireland?",
+  "options": [
+   "Dublin",
+   "Cork",
+   "Galway",
+   "Limerick"
+  ],
+  "fact": "Dublin's River Liffey runs through the middle of the city."
+ },
+ {
+  "country": "Ireland",
+  "landmark": "Irish harp",
+  "question": "Which musical instrument is the national symbol of Ireland?",
+  "options": [
+   "The harp",
+   "The bagpipes",
+   "The violin",
+   "The flute"
+  ],
+  "fact": "The harp appears on Irish coins and passports."
+ },
+ {
+  "country": "Ireland",
+  "landmark": "Samhain",
+  "question": "Which holiday began with the ancient Celtic festival of Samhain in Ireland?",
+  "options": [
+   "Halloween",
+   "Christmas",
+   "Easter",
+   "Valentine's Day"
+  ],
+  "fact": "Irish people once carved turnips, not pumpkins."
+ },
+ {
+  "country": "Ireland",
+  "landmark": "Book of Kells",
+  "question": "The Book of Kells, a famous old book, is kept at which Dublin college?",
+  "options": [
+   "Trinity College",
+   "Oxford",
+   "Harvard",
+   "Sorbonne"
+  ],
+  "fact": "The Book of Kells is over 1,200 years old."
+ },
+ {
+  "country": "Ireland",
+  "landmark": "Irish language",
+  "question": "What is the Irish-language name for Ireland?",
+  "options": [
+   "Eire",
+   "Alba",
+   "Cymru",
+   "Kernow"
+  ],
+  "fact": "Irish, or Gaeilge, is the first official language of Ireland."
+ },
+ {
+  "country": "Ireland",
+  "landmark": "Great Famine (Ireland)",
+  "question": "The Great Famine in Ireland (1845 to 1852) was caused by a disease of which crop?",
+  "options": [
+   "Potato",
+   "Wheat",
+   "Rice",
+   "Corn"
+  ],
+  "fact": "About one million people died and one million left Ireland."
+ },
+ {
+  "country": "Ireland",
+  "landmark": "Irish dance",
+  "question": "In traditional Irish step dancing, dancers keep which part still?",
+  "options": [
+   "Their arms",
+   "Their feet",
+   "Their head",
+   "Their legs"
+  ],
+  "fact": "Irish dancing became world famous with the show Riverdance."
+ },
+ {
+  "country": "Ireland",
+  "landmark": "Hurling",
+  "question": "Hurling, an ancient Irish sport, is played with a wooden stick and a...?",
+  "options": [
+   "Small ball",
+   "Puck",
+   "Shuttlecock",
+   "Hoop"
+  ],
+  "fact": "Hurling is one of the fastest field sports in the world."
+ },
+ {
+  "country": "Ireland",
+  "landmark": "Blarney Stone",
+  "question": "Kissing the Blarney Stone is said to give you what?",
+  "options": [
+   "The gift of the gab",
+   "Luck in love",
+   "Lots of money",
+   "A long life"
+  ],
+  "fact": "Visitors lean backwards over a drop to kiss the stone."
+ },
+ {
+  "country": "Ireland",
+  "landmark": "Ireland",
+  "question": "Ireland's famous nickname is the Emerald...?",
+  "options": [
+   "Isle",
+   "Land",
+   "Coast",
+   "Kingdom"
+  ],
+  "fact": "The nickname comes from its green fields."
+ },
+ {
+  "country": "Ireland",
+  "landmark": "Irish Free State",
+  "question": "In which year was the Irish Free State created?",
+  "options": [
+   "1922",
+   "1801",
+   "1945",
+   "1990"
+  ],
+  "fact": "It later became the Republic of Ireland."
+ },
+ {
+  "country": "Ireland",
+  "landmark": "Temple Bar, Dublin",
+  "question": "What is the Irish name for traditional Irish music sessions in pubs?",
+  "options": [
+   "Seisiun",
+   "Ceili",
+   "Feis",
+   "Craic"
+  ],
+  "fact": "Craic means fun, and you often find it at a seisiun."
+ },
+ {
+  "country": "New Zealand",
+  "landmark": "Maori people",
+  "question": "What are the native people of New Zealand called?",
+  "options": [
+   "Maori",
+   "Aboriginal",
+   "Inuit",
+   "Sami"
+  ],
+  "fact": "Maori arrived in New Zealand over 700 years ago."
+ },
+ {
+  "country": "New Zealand",
+  "landmark": "Haka",
+  "question": "The haka, made famous by the All Blacks, is a traditional Maori...?",
+  "options": [
+   "Ceremonial dance",
+   "Boat",
+   "Meal",
+   "Game"
+  ],
+  "fact": "The haka is performed with chants, stamping and strong facial expressions."
+ },
+ {
+  "country": "New Zealand",
+  "landmark": "Kiwi (bird)",
+  "question": "New Zealand's national bird, the kiwi, cannot do what?",
+  "options": [
+   "Fly",
+   "Swim",
+   "Run",
+   "Sing"
+  ],
+  "fact": "The kiwi lays one of the biggest eggs compared to its body size."
+ },
+ {
+  "country": "New Zealand",
+  "landmark": "Wellington",
+  "question": "What is the capital city of New Zealand?",
+  "options": [
+   "Wellington",
+   "Auckland",
+   "Christchurch",
+   "Queenstown"
+  ],
+  "fact": "Wellington is the southernmost capital city of any country."
+ },
+ {
+  "country": "New Zealand",
+  "landmark": "Hobbiton Movie Set",
+  "question": "Which famous film trilogy was filmed in New Zealand?",
+  "options": [
+   "The Lord of the Rings",
+   "Star Wars",
+   "Harry Potter",
+   "Jurassic Park"
+  ],
+  "fact": "You can still visit the Hobbiton movie set."
+ },
+ {
+  "country": "New Zealand",
+  "landmark": "Women's suffrage in New Zealand",
+  "question": "In 1893 New Zealand became the first country where women could...?",
+  "options": [
+   "Vote in national elections",
+   "Drive cars",
+   "Fly planes",
+   "Own land"
+  ],
+  "fact": "Kate Sheppard led the campaign."
+ },
+ {
+  "country": "New Zealand",
+  "landmark": "Sky Tower (Auckland)",
+  "question": "The Sky Tower is in which New Zealand city?",
+  "options": [
+   "Auckland",
+   "Wellington",
+   "Dunedin",
+   "Hamilton"
+  ],
+  "fact": "People can jump from the Sky Tower on a wire."
+ },
+ {
+  "country": "New Zealand",
+  "landmark": "Kawarau Gorge Suspension Bridge",
+  "question": "Commercial bungee jumping started in 1988 near which New Zealand town?",
+  "options": [
+   "Queenstown",
+   "Rotorua",
+   "Napier",
+   "Nelson"
+  ],
+  "fact": "It began at the Kawarau Bridge."
+ },
+ {
+  "country": "New Zealand",
+  "landmark": "Edmund Hillary",
+  "question": "Which New Zealander first climbed Mount Everest with Tenzing Norgay in 1953?",
+  "options": [
+   "Edmund Hillary",
+   "Peter Jackson",
+   "Ernest Rutherford",
+   "Richie McCaw"
+  ],
+  "fact": "Hillary is on New Zealand's five dollar note."
+ },
+ {
+  "country": "New Zealand",
+  "landmark": "All Blacks",
+  "question": "What color does New Zealand's famous rugby team wear?",
+  "options": [
+   "Black",
+   "Green",
+   "Gold",
+   "Red"
+  ],
+  "fact": "That is why they are called the All Blacks."
+ },
+ {
+  "country": "New Zealand",
+  "landmark": "Aotearoa",
+  "question": "Aotearoa, the Maori name for New Zealand, means land of the long white...?",
+  "options": [
+   "Cloud",
+   "River",
+   "Mountain",
+   "Beach"
+  ],
+  "fact": "Many New Zealanders use Aotearoa every day."
+ },
+ {
+  "country": "New Zealand",
+  "landmark": "Rotorua",
+  "question": "Rotorua is famous for geysers, hot mud and the smell of...?",
+  "options": [
+   "Sulfur",
+   "Roses",
+   "Smoke",
+   "Fish"
+  ],
+  "fact": "The sulfur smell is like rotten eggs."
+ },
+ {
+  "country": "New Zealand",
+  "landmark": "Milford Sound",
+  "question": "Milford Sound in New Zealand is a famous...?",
+  "options": [
+   "Fiord",
+   "Desert",
+   "Volcano",
+   "Glacier lake"
+  ],
+  "fact": "It was carved by glaciers during ice ages."
+ },
+ {
+  "country": "New Zealand",
+  "landmark": "Kiwifruit",
+  "question": "Before it was renamed kiwifruit, this fruit was called the Chinese...?",
+  "options": [
+   "Gooseberry",
+   "Apple",
+   "Orange",
+   "Grape"
+  ],
+  "fact": "New Zealand growers gave it the name kiwifruit."
+ },
+ {
+  "country": "Jamaica",
+  "landmark": "Bob Marley",
+  "question": "Which music style did Bob Marley make famous around the world?",
+  "options": [
+   "Reggae",
+   "Jazz",
+   "Salsa",
+   "Country"
+  ],
+  "fact": "His song One Love is one of the most famous reggae songs ever."
+ },
+ {
+  "country": "Jamaica",
+  "landmark": "Usain Bolt",
+  "question": "Usain Bolt's 100 metre world record time is...?",
+  "options": [
+   "9.58 seconds",
+   "9.98 seconds",
+   "10.20 seconds",
+   "9.69 seconds"
+  ],
+  "fact": "He set it in Berlin in 2009."
+ },
+ {
+  "country": "Jamaica",
+  "landmark": "Kingston, Jamaica",
+  "question": "What is the capital city of Jamaica?",
+  "options": [
+   "Kingston",
+   "Montego Bay",
+   "Ocho Rios",
+   "Negril"
+  ],
+  "fact": "Kingston has one of the largest natural harbours in the world."
+ },
+ {
+  "country": "Jamaica",
+  "landmark": "Jamaica",
+  "question": "In which year did Jamaica become independent from Britain?",
+  "options": [
+   "1962",
+   "1945",
+   "1975",
+   "1990"
+  ],
+  "fact": "Jamaica's Independence Day is August 6."
+ },
+ {
+  "country": "Jamaica",
+  "landmark": "Jerk (cooking)",
+  "question": "Jamaican jerk chicken is famous for which hot pepper?",
+  "options": [
+   "Scotch bonnet",
+   "Jalapeno",
+   "Bell pepper",
+   "Paprika"
+  ],
+  "fact": "Jerk is also flavored with allspice, called pimento in Jamaica."
+ },
+ {
+  "country": "Jamaica",
+  "landmark": "Blue Mountains (Jamaica)",
+  "question": "Jamaica's Blue Mountains are famous for growing which crop?",
+  "options": [
+   "Coffee",
+   "Tea",
+   "Cocoa",
+   "Rice"
+  ],
+  "fact": "Blue Mountain coffee is one of the most expensive coffees in the world."
+ },
+ {
+  "country": "Jamaica",
+  "landmark": "Dunn's River Falls",
+  "question": "Dunn's River Falls, where visitors climb up the waterfall, is near which town?",
+  "options": [
+   "Ocho Rios",
+   "Kingston",
+   "Negril",
+   "Port Antonio"
+  ],
+  "fact": "The falls flow straight into the Caribbean Sea."
+ },
+ {
+  "country": "Jamaica",
+  "landmark": "Jamaica national bobsleigh team",
+  "question": "In 1988 Jamaica surprised the world by competing in which winter sport?",
+  "options": [
+   "Bobsleigh",
+   "Ice hockey",
+   "Skiing",
+   "Figure skating"
+  ],
+  "fact": "Their story inspired the film Cool Runnings."
+ },
+ {
+  "country": "Jamaica",
+  "landmark": "Flag of Jamaica",
+  "question": "Which three colors are on the flag of Jamaica?",
+  "options": [
+   "Black, green and gold",
+   "Red, white and blue",
+   "Green, white and red",
+   "Black, red and yellow"
+  ],
+  "fact": "Jamaica's flag is the only national flag without red, white or blue."
+ },
+ {
+  "country": "Jamaica",
+  "landmark": "Ackee and saltfish",
+  "question": "What is Jamaica's national dish?",
+  "options": [
+   "Ackee and saltfish",
+   "Jerk pork",
+   "Rice and peas",
+   "Curry goat"
+  ],
+  "fact": "Ackee is a fruit that tastes a bit like scrambled eggs when cooked."
+ },
+ {
+  "country": "Jamaica",
+  "landmark": "Taino",
+  "question": "Who were the first people to live in Jamaica?",
+  "options": [
+   "The Taino",
+   "The Maya",
+   "The Inca",
+   "The Vikings"
+  ],
+  "fact": "Many Jamaican words, like hammock, come from the Taino."
+ },
+ {
+  "country": "Jamaica",
+  "landmark": "Rio Grande (Jamaica)",
+  "question": "The Taino name Xaymaca means land of wood and...?",
+  "options": [
+   "Water",
+   "Fire",
+   "Gold",
+   "Sun"
+  ],
+  "fact": "Jamaica has over 100 rivers."
+ },
+ {
+  "country": "Jamaica",
+  "landmark": "Jamaican Patois",
+  "question": "What is the creole language that many Jamaicans speak called?",
+  "options": [
+   "Patois",
+   "Spanglish",
+   "Papiamento",
+   "Haitian Creole"
+  ],
+  "fact": "Wah gwaan means what's going on in Patois."
+ },
+ {
+  "country": "Jamaica",
+  "landmark": "Port Royal",
+  "question": "Which famous pirate city in Jamaica sank in an earthquake in 1692?",
+  "options": [
+   "Port Royal",
+   "Tortuga",
+   "Nassau",
+   "Havana"
+  ],
+  "fact": "Port Royal was once called the wickedest city on Earth."
+ },
+ {
+  "country": "South Africa",
+  "landmark": "Table Mountain",
+  "question": "Table Mountain looks over which South African city?",
+  "options": [
+   "Cape Town",
+   "Johannesburg",
+   "Durban",
+   "Pretoria"
+  ],
+  "fact": "Its flat top is often covered by a cloud called the tablecloth."
+ },
+ {
+  "country": "South Africa",
+  "landmark": "Nelson Mandela",
+  "question": "Who was the first Black president of South Africa?",
+  "options": [
+   "Nelson Mandela",
+   "Desmond Tutu",
+   "Thabo Mbeki",
+   "Jacob Zuma"
+  ],
+  "fact": "Nelson Mandela became president in 1994."
+ },
+ {
+  "country": "South Africa",
+  "landmark": "Robben Island",
+  "question": "Nelson Mandela spent 18 of his 27 years in prison on which island?",
+  "options": [
+   "Robben Island",
+   "Zanzibar",
+   "Madagascar",
+   "Mauritius"
+  ],
+  "fact": "Robben Island is now a museum and UNESCO site."
+ },
+ {
+  "country": "South Africa",
+  "landmark": "Kruger National Park",
+  "question": "Which animal is NOT one of Africa's Big Five?",
+  "options": [
+   "Giraffe",
+   "Lion",
+   "Elephant",
+   "Leopard"
+  ],
+  "fact": "The Big Five are lion, leopard, elephant, rhino and buffalo."
+ },
+ {
+  "country": "South Africa",
+  "landmark": "Union Buildings",
+  "question": "How many capital cities does South Africa have?",
+  "options": [
+   "Three",
+   "One",
+   "Two",
+   "Four"
+  ],
+  "fact": "Pretoria, Cape Town and Bloemfontein."
+ },
+ {
+  "country": "South Africa",
+  "landmark": "South Africa",
+  "question": "South Africa's famous nickname is the ... Nation?",
+  "options": [
+   "Rainbow",
+   "Golden",
+   "Lion",
+   "Sunshine"
+  ],
+  "fact": "Archbishop Desmond Tutu made the name popular."
+ },
+ {
+  "country": "South Africa",
+  "landmark": "Languages of South Africa",
+  "question": "How many official languages does South Africa have?",
+  "options": [
+   "12",
+   "3",
+   "7",
+   "1"
+  ],
+  "fact": "South African Sign Language became the 12th in 2023."
+ },
+ {
+  "country": "South Africa",
+  "landmark": "Cape of Good Hope",
+  "question": "Which Portuguese explorer first sailed around the Cape of Good Hope in 1488?",
+  "options": [
+   "Bartolomeu Dias",
+   "Vasco da Gama",
+   "Ferdinand Magellan",
+   "Christopher Columbus"
+  ],
+  "fact": "He first called it the Cape of Storms."
+ },
+ {
+  "country": "South Africa",
+  "landmark": "Soccer City",
+  "question": "In 2010 South Africa became the first African country to host the...?",
+  "options": [
+   "FIFA World Cup",
+   "Summer Olympics",
+   "Rugby World Cup",
+   "Cricket World Cup"
+  ],
+  "fact": "The final was played at Soccer City in Johannesburg."
+ },
+ {
+  "country": "South Africa",
+  "landmark": "Springboks",
+  "question": "South Africa's national rugby team is called the...?",
+  "options": [
+   "Springboks",
+   "All Blacks",
+   "Wallabies",
+   "Lions"
+  ],
+  "fact": "The springbok is a fast antelope."
+ },
+ {
+  "country": "South Africa",
+  "landmark": "Braai",
+  "question": "What do South Africans call a barbecue?",
+  "options": [
+   "Braai",
+   "Tagine",
+   "Luau",
+   "Asado"
+  ],
+  "fact": "South Africa even has a National Braai Day on September 24."
+ },
+ {
+  "country": "South Africa",
+  "landmark": "Desmond Tutu",
+  "question": "Which South African archbishop won the Nobel Peace Prize in 1984?",
+  "options": [
+   "Desmond Tutu",
+   "Steve Biko",
+   "Thabo Mbeki",
+   "Jacob Zuma"
+  ],
+  "fact": "He fought peacefully against apartheid."
+ },
+ {
+  "country": "South Africa",
+  "landmark": "Cradle of Humankind",
+  "question": "The Cradle of Humankind in South Africa is famous for very old...?",
+  "options": [
+   "Human fossils",
+   "Gold coins",
+   "Dinosaur eggs",
+   "Castles"
+  ],
+  "fact": "Some fossils found there are millions of years old."
+ },
+ {
+  "country": "South Africa",
+  "landmark": "Johannesburg",
+  "question": "Johannesburg grew very fast after the discovery of what in 1886?",
+  "options": [
+   "Gold",
+   "Diamonds",
+   "Oil",
+   "Copper"
+  ],
+  "fact": "Johannesburg is nicknamed eGoli, the place of gold."
+ },
+ {
   "country": "Egypt",
   "landmark": "Great Pyramid of Giza",
   "question": "Which ancient wonder of the world is still standing in Egypt today?",
