@@ -12,7 +12,8 @@ import requests
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
 
 W, H = 1080, 1920
-FONT_URL = "https://github.com/google/fonts/raw/main/ofl/luckiestguy/LuckiestGuy-Regular.ttf"
+FONT_URLS = ["https://raw.githubusercontent.com/google/fonts/main/ofl/luckiestguy/LuckiestGuy-Regular.ttf",
+             "https://github.com/google/fonts/raw/main/ofl/luckiestguy/LuckiestGuy-Regular.ttf"]
 FONT_PATH = "fonts/LuckiestGuy-Regular.ttf"
 FALLBACK = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 FLAGS = {"Morocco": "ma", "USA": "us", "Canada": "ca", "UK": "gb", "Australia": "au", "Ireland": "ie",
@@ -22,16 +23,33 @@ WOOD, WOOD_D, WOOD_L = (184, 116, 56), (92, 50, 20), (214, 150, 82)
 RED, NAVY, YELLOW, WHITE, BROWN = (226, 28, 40), (22, 46, 150), (255, 214, 10), (255, 255, 255), (70, 36, 12)
 
 
+def _usable(path):
+    try:
+        ImageFont.truetype(path, 20)
+        return True
+    except Exception:
+        return False
+
+
 def _font_file():
-    if not os.path.exists(FONT_PATH):
+    if os.path.exists(FONT_PATH) and not _usable(FONT_PATH):
+        os.remove(FONT_PATH)
+    for url in FONT_URLS:
+        if os.path.exists(FONT_PATH):
+            break
         try:  # free Google font (SIL Open Font License), saved once into fonts/
-            data = requests.get(FONT_URL, timeout=30).content
-            if len(data) > 10000:
+            data = requests.get(url, timeout=30).content
+            if data[:4] in (b"\x00\x01\x00\x00", b"true", b"OTTO"):
                 os.makedirs("fonts", exist_ok=True)
                 open(FONT_PATH, "wb").write(data)
+                if not _usable(FONT_PATH):
+                    os.remove(FONT_PATH)
         except Exception as e:
-            print("Font download failed, using DejaVu:", e)
-    return FONT_PATH if os.path.exists(FONT_PATH) else FALLBACK
+            print("Font download failed:", e)
+    if os.path.exists(FONT_PATH):
+        return FONT_PATH
+    print("Using the DejaVu font for thumbnails")
+    return FALLBACK
 
 
 FONT = None
