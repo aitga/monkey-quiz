@@ -12,8 +12,8 @@ import requests
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
 
 W, H = 1080, 1920
-FONT_URLS = ["https://raw.githubusercontent.com/google/fonts/main/ofl/luckiestguy/LuckiestGuy-Regular.ttf",
-             "https://github.com/google/fonts/raw/main/ofl/luckiestguy/LuckiestGuy-Regular.ttf"]
+FONT_URLS = ["https://raw.githubusercontent.com/google/fonts/main/apache/luckiestguy/LuckiestGuy-Regular.ttf",
+             "https://github.com/google/fonts/raw/main/apache/luckiestguy/LuckiestGuy-Regular.ttf"]
 FONT_PATH = "fonts/LuckiestGuy-Regular.ttf"
 FALLBACK = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 FLAGS = {"Morocco": "ma", "USA": "us", "Canada": "ca", "UK": "gb", "Australia": "au", "Ireland": "ie",
@@ -37,7 +37,7 @@ def _font_file():
     for url in FONT_URLS:
         if os.path.exists(FONT_PATH):
             break
-        try:  # free Google font (SIL Open Font License), saved once into fonts/
+        try:  # free Google font (Apache License 2.0), saved once into fonts/
             data = requests.get(url, timeout=30).content
             if data[:4] in (b"\x00\x01\x00\x00", b"true", b"OTTO"):
                 os.makedirs("fonts", exist_ok=True)
