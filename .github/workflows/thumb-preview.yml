@@ -1,0 +1,26 @@
+name: Thumbnail preview
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update && sudo apt-get install -y fonts-dejavu-core
+      - run: pip install -r requirements.txt
+      - run: python thumbnail.py preview 5 0 92 56
+      - run: |
+          git config user.name "monkey-quiz-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add previews fonts images/flag_*.png
+          git commit -m "Thumbnail previews" || echo "no changes"
+          git pull --rebase origin main
+          git push
