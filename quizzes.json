@@ -9,7 +9,9 @@
    "Tangier",
    "Agadir"
   ],
-  "fact": "Its minaret is about 210 metres tall, one of the tallest in the world."
+  "fact": "Its minaret is about 210 metres tall, one of the tallest in the world.",
+  "thumb_title": "Ocean|Mosque",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "Morocco",
@@ -21,7 +23,9 @@
    "Meknes",
    "Essaouira"
   ],
-  "fact": "UNESCO protects the traditions of this square as world heritage."
+  "fact": "UNESCO protects the traditions of this square as world heritage.",
+  "thumb_title": "Square of|Storytellers",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "Morocco",
@@ -33,7 +37,9 @@
    "Ifrane",
    "Tetouan"
   ],
-  "fact": "Chefchaouen sits in the Rif mountains and is called the Blue Pearl."
+  "fact": "Chefchaouen sits in the Rif mountains and is called the Blue Pearl.",
+  "thumb_title": "The Blue|Pearl",
+  "thumb_hook": "Can you name|the town?"
  },
  {
   "country": "Morocco",
@@ -45,7 +51,9 @@
    "Rabat",
    "Tangier"
   ],
-  "fact": "It was founded by a woman, Fatima al-Fihri."
+  "fact": "It was founded by a woman, Fatima al-Fihri.",
+  "thumb_title": "World's Oldest|University",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "Morocco",
@@ -57,7 +65,9 @@
    "A musical instrument",
    "A desert tent"
   ],
-  "fact": "The tall cone lid keeps the food juicy while it cooks slowly."
+  "fact": "The tall cone lid keeps the food juicy while it cooks slowly.",
+  "thumb_title": "Morocco's|Magic Pot",
+  "thumb_hook": "Do you know|what it is?"
  },
  {
   "country": "Morocco",
@@ -69,7 +79,9 @@
    "Kasbah of the Udayas",
    "Ifrane"
   ],
-  "fact": "Gladiator and Game of Thrones were filmed there."
+  "fact": "Gladiator and Game of Thrones were filmed there.",
+  "thumb_title": "Moroccan|Hollywood",
+  "thumb_hook": "Can you guess|the village?"
  },
  {
   "country": "Morocco",
@@ -81,7 +93,9 @@
    "Oujda",
    "Laayoune"
   ],
-  "fact": "Volubilis was an important Roman town 2,000 years ago."
+  "fact": "Volubilis was an important Roman town 2,000 years ago.",
+  "thumb_title": "Lost Roman|City",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "Morocco",
@@ -93,7 +107,9 @@
    "Hibiscus juice",
    "Lemon soda"
   ],
-  "fact": "It is poured from high up to make foam on top."
+  "fact": "It is poured from high up to make foam on top.",
+  "thumb_title": "Moroccan|Welcome Drink",
+  "thumb_hook": "Can you guess|the drink?"
  },
  {
   "country": "Morocco",
@@ -105,7 +121,9 @@
    "Marco Polo",
    "Tariq ibn Ziyad"
   ],
-  "fact": "He travelled even farther than Marco Polo."
+  "fact": "He travelled even farther than Marco Polo.",
+  "thumb_title": "The Great|Explorer",
+  "thumb_hook": "Can you guess|who?"
  },
  {
   "country": "Morocco",
@@ -117,7 +135,9 @@
    "Gate of Tariq",
    "City of Tariq"
   ],
-  "fact": "Tariq crossed from North Africa to Spain in the year 711."
+  "fact": "Tariq crossed from North Africa to Spain in the year 711.",
+  "thumb_title": "Gibraltar's|Secret Name",
+  "thumb_hook": "Do you know|the meaning?"
  },
  {
   "country": "Morocco",
@@ -129,7 +149,9 @@
    "Wednesday",
    "Saturday"
   ],
-  "fact": "Couscous is on UNESCO's list of world cultural heritage."
+  "fact": "Couscous is on UNESCO's list of world cultural heritage.",
+  "thumb_title": "Couscous|Day",
+  "thumb_hook": "Can you guess|the day?"
  },
  {
   "country": "Morocco",
@@ -141,7 +163,9 @@
    "Jebel Musa",
    "Mount Sinai"
   ],
-  "fact": "Toubkal in the Atlas mountains is 4,167 metres high."
+  "fact": "Toubkal in the Atlas mountains is 4,167 metres high.",
+  "thumb_title": "Roof of|North Africa",
+  "thumb_hook": "Can you name|the mountain?"
  },
  {
   "country": "Morocco",
@@ -153,7 +177,9 @@
    "Quarter-finals",
    "Round of 16"
   ],
-  "fact": "The Atlas Lions beat Spain and Portugal on the way."
+  "fact": "The Atlas Lions beat Spain and Portugal on the way.",
+  "thumb_title": "Atlas Lions|Make History",
+  "thumb_hook": "Can you guess|the stage?"
  },
  {
   "country": "Morocco",
@@ -165,7 +191,9 @@
    "Nubian",
    "Maasai"
   ],
-  "fact": "Tamazight became an official language of Morocco in 2011."
+  "fact": "Tamazight became an official language of Morocco in 2011.",
+  "thumb_title": "The Free|People",
+  "thumb_hook": "Can you name|them?"
  },
  {
   "country": "USA",
@@ -177,7 +205,9 @@
    "Spain",
    "Italy"
   ],
-  "fact": "It was dedicated in New York Harbor in 1886."
+  "fact": "It was dedicated in New York Harbor in 1886.",
+  "thumb_title": "Lady|Liberty",
+  "thumb_hook": "Can you guess|the country?"
  },
  {
   "country": "USA",
@@ -189,7 +219,9 @@
    "Missouri River",
    "Hudson River"
   ],
-  "fact": "In places the canyon is more than a mile deep."
+  "fact": "In places the canyon is more than a mile deep.",
+  "thumb_title": "The Grand|Canyon",
+  "thumb_hook": "Can you name|the river?"
  },
  {
   "country": "USA",
@@ -201,7 +233,9 @@
    "Five",
    "Six"
   ],
-  "fact": "Washington, Jefferson, Theodore Roosevelt and Lincoln."
+  "fact": "Washington, Jefferson, Theodore Roosevelt and Lincoln.",
+  "thumb_title": "Faces in|the Rock",
+  "thumb_hook": "How many|faces?"
  },
  {
   "country": "USA",
@@ -213,7 +247,9 @@
    "Seattle",
    "San Diego"
   ],
-  "fact": "It opened in 1937 and its color is called International Orange."
+  "fact": "It opened in 1937 and its color is called International Orange.",
+  "thumb_title": "The Golden|Gate",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "USA",
@@ -225,7 +261,9 @@
    "Holly Hills",
    "Hollywood Studios"
   ],
-  "fact": "It was built in 1923 to advertise new houses. The word land was removed in 1949."
+  "fact": "It was built in 1923 to advertise new houses. The word land was removed in 1949.",
+  "thumb_title": "Hollywood's|First Name",
+  "thumb_hook": "Do you know|the old sign?"
  },
  {
   "country": "USA",
@@ -237,7 +275,9 @@
    "Thomas Jefferson",
    "Abraham Lincoln"
   ],
-  "fact": "John Adams moved in in the year 1800."
+  "fact": "John Adams moved in in the year 1800.",
+  "thumb_title": "The First|Resident",
+  "thumb_hook": "Can you guess|who?"
  },
  {
   "country": "USA",
@@ -249,7 +289,9 @@
    "Duck",
    "Goose"
   ],
-  "fact": "Thanksgiving is celebrated on the fourth Thursday of November."
+  "fact": "Thanksgiving is celebrated on the fourth Thursday of November.",
+  "thumb_title": "Thanksgiving|Feast",
+  "thumb_hook": "Can you guess|the bird?"
  },
  {
   "country": "USA",
@@ -261,7 +303,9 @@
    "Basketball",
    "Ice hockey"
   ],
-  "fact": "It is one of the most watched TV events in the USA every year."
+  "fact": "It is one of the most watched TV events in the USA every year.",
+  "thumb_title": "Super Bowl|Sunday",
+  "thumb_hook": "Can you guess|the sport?"
  },
  {
   "country": "USA",
@@ -273,7 +317,9 @@
    "Washington Square",
    "Madison Square"
   ],
-  "fact": "The ball drop tradition started in 1907."
+  "fact": "The ball drop tradition started in 1907.",
+  "thumb_title": "New Year's|Ball Drop",
+  "thumb_hook": "Can you guess|the place?"
  },
  {
   "country": "USA",
@@ -285,7 +331,9 @@
    "1975",
    "1981"
   ],
-  "fact": "Neil Armstrong and Buzz Aldrin walked on the Moon in July 1969."
+  "fact": "Neil Armstrong and Buzz Aldrin walked on the Moon in July 1969.",
+  "thumb_title": "One Giant|Leap",
+  "thumb_hook": "Can you guess|the year?"
  },
  {
   "country": "USA",
@@ -297,7 +345,9 @@
    "Barack Obama",
    "Rosa Parks"
   ],
-  "fact": "About 250,000 people came to hear the speech."
+  "fact": "About 250,000 people came to hear the speech.",
+  "thumb_title": "I Have|a Dream",
+  "thumb_hook": "Can you guess|who?"
  },
  {
   "country": "USA",
@@ -309,7 +359,9 @@
    "Nashville",
    "Detroit"
   ],
-  "fact": "Jazz grew in New Orleans in the early 1900s."
+  "fact": "Jazz grew in New Orleans in the early 1900s.",
+  "thumb_title": "Birthplace|of Jazz",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "USA",
@@ -321,7 +373,9 @@
    "Grand Canyon",
    "Everglades"
   ],
-  "fact": "Yellowstone is home to the famous geyser Old Faithful."
+  "fact": "Yellowstone is home to the famous geyser Old Faithful.",
+  "thumb_title": "World's First|National Park",
+  "thumb_hook": "Can you name|the park?"
  },
  {
   "country": "USA",
@@ -333,7 +387,9 @@
    "Britain",
    "Spain"
   ],
-  "fact": "The USA paid 7.2 million dollars, about 2 cents per acre."
+  "fact": "The USA paid 7.2 million dollars, about 2 cents per acre.",
+  "thumb_title": "Alaska|for Sale",
+  "thumb_hook": "Can you guess|the seller?"
  },
  {
   "country": "Canada",
@@ -345,7 +401,9 @@
    "Montreal",
    "Ottawa"
   ],
-  "fact": "At 553 metres it was the tallest free-standing structure in the world for over 30 years."
+  "fact": "At 553 metres it was the tallest free-standing structure in the world for over 30 years.",
+  "thumb_title": "The Giant|Tower",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "Canada",
@@ -357,7 +415,9 @@
    "Greenland",
    "France"
   ],
-  "fact": "Most of the huge Horseshoe Falls is on the Canadian side."
+  "fact": "Most of the huge Horseshoe Falls is on the Canadian side.",
+  "thumb_title": "Mighty|Niagara",
+  "thumb_hook": "Can you guess|the country?"
  },
  {
   "country": "Canada",
@@ -369,7 +429,9 @@
    "Pine",
    "Birch"
   ],
-  "fact": "The maple leaf flag was adopted in 1965."
+  "fact": "The maple leaf flag was adopted in 1965.",
+  "thumb_title": "Canada's|Famous Leaf",
+  "thumb_hook": "Can you name|the leaf?"
  },
  {
   "country": "Canada",
@@ -381,7 +443,9 @@
    "Beans",
    "Mushrooms"
   ],
-  "fact": "Poutine comes from the province of Quebec."
+  "fact": "Poutine comes from the province of Quebec.",
+  "thumb_title": "Canada's|Comfort Food",
+  "thumb_hook": "Can you guess|the topping?"
  },
  {
   "country": "Canada",
@@ -393,7 +457,9 @@
    "Vancouver",
    "Montreal"
   ],
-  "fact": "Canada's Parliament sits on Parliament Hill in Ottawa."
+  "fact": "Canada's Parliament sits on Parliament Hill in Ottawa.",
+  "thumb_title": "Canada's|Capital",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "Canada",
@@ -405,7 +471,9 @@
    "1901",
    "1931"
   ],
-  "fact": "Canada Day on July 1 celebrates Confederation in 1867."
+  "fact": "Canada Day on July 1 celebrates Confederation in 1867.",
+  "thumb_title": "Happy Birthday|Canada",
+  "thumb_hook": "Can you guess|the year?"
  },
  {
   "country": "Canada",
@@ -417,7 +485,9 @@
    "Andes",
    "Alps"
   ],
-  "fact": "Banff National Park was created in 1885."
+  "fact": "Banff National Park was created in 1885.",
+  "thumb_title": "Wild|Banff",
+  "thumb_hook": "Can you name|the mountains?"
  },
  {
   "country": "Canada",
@@ -429,7 +499,9 @@
    "Skiing",
    "Figure skating"
   ],
-  "fact": "Lacrosse is Canada's national summer sport."
+  "fact": "Lacrosse is Canada's national summer sport.",
+  "thumb_title": "Canada's|Winter Sport",
+  "thumb_hook": "Can you guess|the sport?"
  },
  {
   "country": "Canada",
@@ -441,7 +513,9 @@
    "Spanish",
    "Italian"
   ],
-  "fact": "Quebec City was founded by the French explorer Samuel de Champlain in 1608."
+  "fact": "Quebec City was founded by the French explorer Samuel de Champlain in 1608.",
+  "thumb_title": "Language of|Quebec",
+  "thumb_hook": "Can you guess|the language?"
  },
  {
   "country": "Canada",
@@ -453,7 +527,9 @@
    "Terry Fox",
    "Alexander Graham Bell"
   ],
-  "fact": "He invented basketball in 1891 using peach baskets."
+  "fact": "He invented basketball in 1891 using peach baskets.",
+  "thumb_title": "Canada's|Big Invention",
+  "thumb_hook": "Can you guess|who?"
  },
  {
   "country": "Canada",
@@ -465,7 +541,9 @@
    "Redcoats",
    "Marshals"
   ],
-  "fact": "Their full name is the Royal Canadian Mounted Police."
+  "fact": "Their full name is the Royal Canadian Mounted Police.",
+  "thumb_title": "Red Coat|Heroes",
+  "thumb_hook": "Can you name|them?"
  },
  {
   "country": "Canada",
@@ -477,7 +555,9 @@
    "Alberta",
    "Manitoba"
   ],
-  "fact": "Quebec makes around 70 percent of the world's maple syrup."
+  "fact": "Quebec makes around 70 percent of the world's maple syrup.",
+  "thumb_title": "Sweet|Maple Syrup",
+  "thumb_hook": "Can you guess|the province?"
  },
  {
   "country": "Canada",
@@ -489,7 +569,9 @@
    "The Romans",
    "The Aztecs"
   ],
-  "fact": "Inuksuk help travellers find their way across the Arctic."
+  "fact": "Inuksuk help travellers find their way across the Arctic.",
+  "thumb_title": "Stone|Messengers",
+  "thumb_hook": "Can you guess|the people?"
  },
  {
   "country": "Canada",
@@ -501,7 +583,9 @@
    "Railway",
    "Wall"
   ],
-  "fact": "Canada's coastline is over 240,000 kilometres long."
+  "fact": "Canada's coastline is over 240,000 kilometres long.",
+  "thumb_title": "Canada's|World Record",
+  "thumb_hook": "Can you guess|what?"
  },
  {
   "country": "UK",
@@ -513,7 +597,9 @@
    "The clock face",
    "A king"
   ],
-  "fact": "The tower itself was renamed Elizabeth Tower in 2012."
+  "fact": "The tower itself was renamed Elizabeth Tower in 2012.",
+  "thumb_title": "Big Ben's|Secret",
+  "thumb_hook": "Do you know|what it is?"
  },
  {
   "country": "UK",
@@ -525,7 +611,9 @@
    "Wales",
    "Northern Ireland"
   ],
-  "fact": "Work on Stonehenge began about 5,000 years ago."
+  "fact": "Work on Stonehenge began about 5,000 years ago.",
+  "thumb_title": "Mystery of|Stonehenge",
+  "thumb_hook": "Can you guess|the country?"
  },
  {
   "country": "UK",
@@ -537,7 +625,9 @@
    "The Mayor of London",
    "The Archbishop"
   ],
-  "fact": "The palace has 775 rooms."
+  "fact": "The palace has 775 rooms.",
+  "thumb_title": "Royal|Palace",
+  "thumb_hook": "Can you guess|who?"
  },
  {
   "country": "UK",
@@ -549,7 +639,9 @@
    "The Mayor of London",
    "The Royal Guards"
   ],
-  "fact": "Its famous black door can only be opened from the inside."
+  "fact": "Its famous black door can only be opened from the inside.",
+  "thumb_title": "Famous|Black Door",
+  "thumb_hook": "Can you guess|who?"
  },
  {
   "country": "UK",
@@ -561,7 +653,9 @@
    "The Rosetta Stone",
    "The Mona Lisa"
   ],
-  "fact": "Ravens have lived at the Tower for centuries."
+  "fact": "Ravens have lived at the Tower for centuries.",
+  "thumb_title": "Tower|Treasure",
+  "thumb_hook": "Can you guess|the treasure?"
  },
  {
   "country": "UK",
@@ -573,7 +667,9 @@
    "Bread",
    "Pasta"
   ],
-  "fact": "Fish and chips became popular in the 1860s."
+  "fact": "Fish and chips became popular in the 1860s.",
+  "thumb_title": "Britain's|Takeaway",
+  "thumb_hook": "Can you finish|the name?"
  },
  {
   "country": "UK",
@@ -585,7 +681,9 @@
    "Jane Austen",
    "Oscar Wilde"
   ],
-  "fact": "Shakespeare wrote about 37 plays."
+  "fact": "Shakespeare wrote about 37 plays.",
+  "thumb_title": "The Globe|Theatre",
+  "thumb_hook": "Can you guess|the writer?"
  },
  {
   "country": "UK",
@@ -597,7 +695,9 @@
    "Ireland",
    "England"
   ],
-  "fact": "Edinburgh Castle sits on top of an old volcano."
+  "fact": "Edinburgh Castle sits on top of an old volcano.",
+  "thumb_title": "Castle|Capital",
+  "thumb_hook": "Can you guess|the country?"
  },
  {
   "country": "UK",
@@ -609,7 +709,9 @@
    "The Yeti",
    "The Kraken"
   ],
-  "fact": "Loch Ness holds more fresh water than all the lakes of England and Wales together."
+  "fact": "Loch Ness holds more fresh water than all the lakes of England and Wales together.",
+  "thumb_title": "Monster|of the Loch",
+  "thumb_hook": "Can you name|the monster?"
  },
  {
   "country": "UK",
@@ -621,7 +723,9 @@
    "Victoria",
    "Waterloo"
   ],
-  "fact": "The station has a real Platform 9 and three quarters photo spot for fans."
+  "fact": "The station has a real Platform 9 and three quarters photo spot for fans.",
+  "thumb_title": "Platform|9 and 3/4",
+  "thumb_hook": "Can you guess|the station?"
  },
  {
   "country": "UK",
@@ -633,7 +737,9 @@
    "Manchester",
    "Birmingham"
   ],
-  "fact": "The Beatles are the best-selling music act of all time."
+  "fact": "The Beatles are the best-selling music act of all time.",
+  "thumb_title": "The Fab|Four",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "UK",
@@ -645,7 +751,9 @@
    "Italy",
    "Spain"
   ],
-  "fact": "The Football Association was founded in London in 1863."
+  "fact": "The Football Association was founded in London in 1863.",
+  "thumb_title": "Birth of|Football",
+  "thumb_hook": "Can you guess|the country?"
  },
  {
   "country": "UK",
@@ -657,7 +765,9 @@
    "Thames Star",
    "Royal Ring"
   ],
-  "fact": "The London Eye opened in the year 2000."
+  "fact": "The London Eye opened in the year 2000.",
+  "thumb_title": "Giant|Wheel",
+  "thumb_hook": "Can you name|it?"
  },
  {
   "country": "UK",
@@ -669,7 +779,9 @@
    "A unicorn",
    "An eagle"
   ],
-  "fact": "In Welsh it is called Y Ddraig Goch, the red dragon."
+  "fact": "In Welsh it is called Y Ddraig Goch, the red dragon.",
+  "thumb_title": "Flag of|Wales",
+  "thumb_hook": "Can you guess|the animal?"
  },
  {
   "country": "Australia",
@@ -681,7 +793,9 @@
    "Brisbane",
    "Perth"
   ],
-  "fact": "It opened in 1973 and is a UNESCO World Heritage Site."
+  "fact": "It opened in 1973 and is a UNESCO World Heritage Site.",
+  "thumb_title": "Sail-Shaped|Roofs",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "Australia",
@@ -693,7 +807,9 @@
    "Inuit people",
    "Zulu people"
   ],
-  "fact": "Uluru rises about 348 metres above the desert."
+  "fact": "Uluru rises about 348 metres above the desert.",
+  "thumb_title": "Sacred|Red Rock",
+  "thumb_hook": "Can you guess|the people?"
  },
  {
   "country": "Australia",
@@ -705,7 +821,9 @@
    "Volcanic rock",
    "Sand"
   ],
-  "fact": "It is the largest coral reef system in the world."
+  "fact": "It is the largest coral reef system in the world.",
+  "thumb_title": "The Great|Barrier Reef",
+  "thumb_hook": "Do you know|what it's made of?"
  },
  {
   "country": "Australia",
@@ -717,7 +835,9 @@
    "Wombat",
    "Platypus"
   ],
-  "fact": "Kangaroos and emus can't easily walk backwards, a symbol of moving forward."
+  "fact": "Kangaroos and emus can't easily walk backwards, a symbol of moving forward.",
+  "thumb_title": "Australia's|Coat of Arms",
+  "thumb_hook": "Can you guess|the animal?"
  },
  {
   "country": "Australia",
@@ -729,7 +849,9 @@
    "Melbourne",
    "Perth"
   ],
-  "fact": "Canberra was built as a compromise between Sydney and Melbourne."
+  "fact": "Canberra was built as a compromise between Sydney and Melbourne.",
+  "thumb_title": "Australia's|Capital",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "Australia",
@@ -741,7 +863,9 @@
    "Grass",
    "Insects"
   ],
-  "fact": "Koalas can sleep up to 20 hours a day."
+  "fact": "Koalas can sleep up to 20 hours a day.",
+  "thumb_title": "Koala|Menu",
+  "thumb_hook": "Can you guess|the food?"
  },
  {
   "country": "Australia",
@@ -753,7 +877,9 @@
    "Didgeridoo",
    "Shield"
   ],
-  "fact": "Aboriginal Australians used boomerangs for thousands of years."
+  "fact": "Aboriginal Australians used boomerangs for thousands of years.",
+  "thumb_title": "Aboriginal|Flying Tool",
+  "thumb_hook": "Can you name|it?"
  },
  {
   "country": "Australia",
@@ -765,7 +891,9 @@
    "Boat",
    "Weapon"
   ],
-  "fact": "Players use circular breathing to play a non-stop sound."
+  "fact": "Players use circular breathing to play a non-stop sound.",
+  "thumb_title": "The|Didgeridoo",
+  "thumb_hook": "Do you know|what it is?"
  },
  {
   "country": "Australia",
@@ -777,7 +905,9 @@
    "1801",
    "1851"
   ],
-  "fact": "The First Fleet arrived at Sydney Cove in 1788."
+  "fact": "The First Fleet arrived at Sydney Cove in 1788.",
+  "thumb_title": "The First|Fleet",
+  "thumb_hook": "Can you guess|the year?"
  },
  {
   "country": "Australia",
@@ -789,7 +919,9 @@
    "Dance",
    "Sport"
   ],
-  "fact": "It is a salty spread made from yeast extract, eaten on toast."
+  "fact": "It is a salty spread made from yeast extract, eaten on toast.",
+  "thumb_title": "Aussie|Breakfast",
+  "thumb_hook": "Do you know|what it is?"
  },
  {
   "country": "Australia",
@@ -801,7 +933,9 @@
    "The Iron Lady",
    "The Rainbow"
   ],
-  "fact": "It opened in 1932."
+  "fact": "It opened in 1932.",
+  "thumb_title": "Sydney Harbour|Bridge",
+  "thumb_hook": "Can you guess|the nickname?"
  },
  {
   "country": "Australia",
@@ -813,7 +947,9 @@
    "Koala",
    "Wombat"
   ],
-  "fact": "The platypus also has a duck-like bill."
+  "fact": "The platypus also has a duck-like bill.",
+  "thumb_title": "Nature's|Strangest Mammal",
+  "thumb_hook": "Can you guess|the animal?"
  },
  {
   "country": "Australia",
@@ -825,7 +961,9 @@
    "Perth",
    "Adelaide"
   ],
-  "fact": "Bondi has one of the oldest surf lifesaving clubs in the world."
+  "fact": "Bondi has one of the oldest surf lifesaving clubs in the world.",
+  "thumb_title": "Bondi|Beach",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "Australia",
@@ -837,7 +975,9 @@
    "The Red Zone",
    "The Wild West"
   ],
-  "fact": "Most Australians live on the coast, far from the Outback."
+  "fact": "Most Australians live on the coast, far from the Outback.",
+  "thumb_title": "Australia's|Wild Heart",
+  "thumb_hook": "Can you guess|the name?"
  },
  {
   "country": "Ireland",
@@ -849,7 +989,9 @@
    "North coast",
    "South coast"
   ],
-  "fact": "The cliffs face the Atlantic Ocean in County Clare."
+  "fact": "The cliffs face the Atlantic Ocean in County Clare.",
+  "thumb_title": "Cliffs of|Moher",
+  "thumb_hook": "Can you guess|the coast?"
  },
  {
   "country": "Ireland",
@@ -861,7 +1003,9 @@
    "October 31",
    "December 26"
   ],
-  "fact": "St Patrick is the patron saint of Ireland."
+  "fact": "St Patrick is the patron saint of Ireland.",
+  "thumb_title": "St Patrick's|Day",
+  "thumb_hook": "Can you guess|the date?"
  },
  {
   "country": "Ireland",
@@ -873,7 +1017,9 @@
    "Galway",
    "Limerick"
   ],
-  "fact": "Dublin's River Liffey runs through the middle of the city."
+  "fact": "Dublin's River Liffey runs through the middle of the city.",
+  "thumb_title": "Ireland's|Capital",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "Ireland",
@@ -885,7 +1031,9 @@
    "The violin",
    "The flute"
   ],
-  "fact": "The harp appears on Irish coins and passports."
+  "fact": "The harp appears on Irish coins and passports.",
+  "thumb_title": "Ireland's|National Symbol",
+  "thumb_hook": "Can you guess|the instrument?"
  },
  {
   "country": "Ireland",
@@ -897,7 +1045,9 @@
    "Easter",
    "Valentine's Day"
   ],
-  "fact": "Irish people once carved turnips, not pumpkins."
+  "fact": "Irish people once carved turnips, not pumpkins.",
+  "thumb_title": "Spooky|Samhain",
+  "thumb_hook": "Can you guess|the holiday?"
  },
  {
   "country": "Ireland",
@@ -909,7 +1059,9 @@
    "Harvard",
    "Sorbonne"
   ],
-  "fact": "The Book of Kells is over 1,200 years old."
+  "fact": "The Book of Kells is over 1,200 years old.",
+  "thumb_title": "The Book|of Kells",
+  "thumb_hook": "Can you guess|the college?"
  },
  {
   "country": "Ireland",
@@ -921,7 +1073,9 @@
    "Cymru",
    "Kernow"
   ],
-  "fact": "Irish, or Gaeilge, is the first official language of Ireland."
+  "fact": "Irish, or Gaeilge, is the first official language of Ireland.",
+  "thumb_title": "Ireland's|Irish Name",
+  "thumb_hook": "Do you know|it?"
  },
  {
   "country": "Ireland",
@@ -933,7 +1087,9 @@
    "Rice",
    "Corn"
   ],
-  "fact": "About one million people died and one million left Ireland."
+  "fact": "About one million people died and one million left Ireland.",
+  "thumb_title": "The Great|Famine",
+  "thumb_hook": "Can you guess|the crop?"
  },
  {
   "country": "Ireland",
@@ -945,7 +1101,9 @@
    "Their head",
    "Their legs"
   ],
-  "fact": "Irish dancing became world famous with the show Riverdance."
+  "fact": "Irish dancing became world famous with the show Riverdance.",
+  "thumb_title": "Irish Step|Dancing",
+  "thumb_hook": "Can you guess|the secret?"
  },
  {
   "country": "Ireland",
@@ -957,7 +1115,9 @@
    "Shuttlecock",
    "Hoop"
   ],
-  "fact": "Hurling is one of the fastest field sports in the world."
+  "fact": "Hurling is one of the fastest field sports in the world.",
+  "thumb_title": "Ancient|Hurling",
+  "thumb_hook": "Can you finish|it?"
  },
  {
   "country": "Ireland",
@@ -969,7 +1129,9 @@
    "Lots of money",
    "A long life"
   ],
-  "fact": "Visitors lean backwards over a drop to kiss the stone."
+  "fact": "Visitors lean backwards over a drop to kiss the stone.",
+  "thumb_title": "The Blarney|Stone",
+  "thumb_hook": "Do you know|the gift?"
  },
  {
   "country": "Ireland",
@@ -981,7 +1143,9 @@
    "Coast",
    "Kingdom"
   ],
-  "fact": "The nickname comes from its green fields."
+  "fact": "The nickname comes from its green fields.",
+  "thumb_title": "Ireland's|Nickname",
+  "thumb_hook": "Can you finish|it?"
  },
  {
   "country": "Ireland",
@@ -993,7 +1157,9 @@
    "1945",
    "1990"
   ],
-  "fact": "It later became the Republic of Ireland."
+  "fact": "It later became the Republic of Ireland.",
+  "thumb_title": "A New|Irish State",
+  "thumb_hook": "Can you guess|the year?"
  },
  {
   "country": "Ireland",
@@ -1005,7 +1171,9 @@
    "Feis",
    "Craic"
   ],
-  "fact": "Craic means fun, and you often find it at a seisiun."
+  "fact": "Craic means fun, and you often find it at a seisiun.",
+  "thumb_title": "Irish Pub|Music",
+  "thumb_hook": "Do you know|the name?"
  },
  {
   "country": "New Zealand",
@@ -1017,7 +1185,9 @@
    "Inuit",
    "Sami"
   ],
-  "fact": "Maori arrived in New Zealand over 700 years ago."
+  "fact": "Maori arrived in New Zealand over 700 years ago.",
+  "thumb_title": "New Zealand's|First People",
+  "thumb_hook": "Can you name|them?"
  },
  {
   "country": "New Zealand",
@@ -1029,7 +1199,9 @@
    "Meal",
    "Game"
   ],
-  "fact": "The haka is performed with chants, stamping and strong facial expressions."
+  "fact": "The haka is performed with chants, stamping and strong facial expressions.",
+  "thumb_title": "The Famous|Haka",
+  "thumb_hook": "Do you know|what it is?"
  },
  {
   "country": "New Zealand",
@@ -1041,7 +1213,9 @@
    "Run",
    "Sing"
   ],
-  "fact": "The kiwi lays one of the biggest eggs compared to its body size."
+  "fact": "The kiwi lays one of the biggest eggs compared to its body size.",
+  "thumb_title": "The Kiwi|Bird",
+  "thumb_hook": "Do you know|its secret?"
  },
  {
   "country": "New Zealand",
@@ -1053,7 +1227,9 @@
    "Christchurch",
    "Queenstown"
   ],
-  "fact": "Wellington is the southernmost capital city of any country."
+  "fact": "Wellington is the southernmost capital city of any country.",
+  "thumb_title": "New Zealand's|Capital",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "New Zealand",
@@ -1065,7 +1241,9 @@
    "Harry Potter",
    "Jurassic Park"
   ],
-  "fact": "You can still visit the Hobbiton movie set."
+  "fact": "You can still visit the Hobbiton movie set.",
+  "thumb_title": "Movie Magic|in New Zealand",
+  "thumb_hook": "Can you guess|the films?"
  },
  {
   "country": "New Zealand",
@@ -1077,7 +1255,9 @@
    "Fly planes",
    "Own land"
   ],
-  "fact": "Kate Sheppard led the campaign."
+  "fact": "Kate Sheppard led the campaign.",
+  "thumb_title": "A World|First!",
+  "thumb_hook": "Can you guess|what?"
  },
  {
   "country": "New Zealand",
@@ -1089,7 +1269,9 @@
    "Dunedin",
    "Hamilton"
   ],
-  "fact": "People can jump from the Sky Tower on a wire."
+  "fact": "People can jump from the Sky Tower on a wire.",
+  "thumb_title": "Sky|Tower",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "New Zealand",
@@ -1101,7 +1283,9 @@
    "Napier",
    "Nelson"
   ],
-  "fact": "It began at the Kawarau Bridge."
+  "fact": "It began at the Kawarau Bridge.",
+  "thumb_title": "Bungee|Jumping",
+  "thumb_hook": "Can you guess|the town?"
  },
  {
   "country": "New Zealand",
@@ -1113,7 +1297,9 @@
    "Ernest Rutherford",
    "Richie McCaw"
   ],
-  "fact": "Hillary is on New Zealand's five dollar note."
+  "fact": "Hillary is on New Zealand's five dollar note.",
+  "thumb_title": "Top of|the World",
+  "thumb_hook": "Can you guess|who?"
  },
  {
   "country": "New Zealand",
@@ -1125,7 +1311,9 @@
    "Gold",
    "Red"
   ],
-  "fact": "That is why they are called the All Blacks."
+  "fact": "That is why they are called the All Blacks.",
+  "thumb_title": "Rugby|Legends",
+  "thumb_hook": "Can you guess|the color?"
  },
  {
   "country": "New Zealand",
@@ -1137,7 +1325,9 @@
    "Mountain",
    "Beach"
   ],
-  "fact": "Many New Zealanders use Aotearoa every day."
+  "fact": "Many New Zealanders use Aotearoa every day.",
+  "thumb_title": "Aotearoa",
+  "thumb_hook": "Can you finish|the meaning?"
  },
  {
   "country": "New Zealand",
@@ -1149,7 +1339,9 @@
    "Smoke",
    "Fish"
   ],
-  "fact": "The sulfur smell is like rotten eggs."
+  "fact": "The sulfur smell is like rotten eggs.",
+  "thumb_title": "Rotorua's|Hot Mud",
+  "thumb_hook": "Can you guess|the smell?"
  },
  {
   "country": "New Zealand",
@@ -1161,7 +1353,9 @@
    "Volcano",
    "Glacier lake"
   ],
-  "fact": "It was carved by glaciers during ice ages."
+  "fact": "It was carved by glaciers during ice ages.",
+  "thumb_title": "Milford|Sound",
+  "thumb_hook": "Do you know|what it is?"
  },
  {
   "country": "New Zealand",
@@ -1173,7 +1367,9 @@
    "Orange",
    "Grape"
   ],
-  "fact": "New Zealand growers gave it the name kiwifruit."
+  "fact": "New Zealand growers gave it the name kiwifruit.",
+  "thumb_title": "The Kiwifruit|Mystery",
+  "thumb_hook": "Can you guess|the old name?"
  },
  {
   "country": "Jamaica",
@@ -1185,7 +1381,9 @@
    "Salsa",
    "Country"
   ],
-  "fact": "His song One Love is one of the most famous reggae songs ever."
+  "fact": "His song One Love is one of the most famous reggae songs ever.",
+  "thumb_title": "Bob|Marley",
+  "thumb_hook": "Can you guess|the music?"
  },
  {
   "country": "Jamaica",
@@ -1197,7 +1395,9 @@
    "10.20 seconds",
    "9.69 seconds"
   ],
-  "fact": "He set it in Berlin in 2009."
+  "fact": "He set it in Berlin in 2009.",
+  "thumb_title": "Lightning|Bolt",
+  "thumb_hook": "Can you guess|the time?"
  },
  {
   "country": "Jamaica",
@@ -1209,7 +1409,9 @@
    "Ocho Rios",
    "Negril"
   ],
-  "fact": "Kingston has one of the largest natural harbours in the world."
+  "fact": "Kingston has one of the largest natural harbours in the world.",
+  "thumb_title": "Jamaica's|Capital",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "Jamaica",
@@ -1221,7 +1423,9 @@
    "1975",
    "1990"
   ],
-  "fact": "Jamaica's Independence Day is August 6."
+  "fact": "Jamaica's Independence Day is August 6.",
+  "thumb_title": "Jamaica's|Big Day",
+  "thumb_hook": "Can you guess|the year?"
  },
  {
   "country": "Jamaica",
@@ -1233,7 +1437,9 @@
    "Bell pepper",
    "Paprika"
   ],
-  "fact": "Jerk is also flavored with allspice, called pimento in Jamaica."
+  "fact": "Jerk is also flavored with allspice, called pimento in Jamaica.",
+  "thumb_title": "Jerk|Chicken",
+  "thumb_hook": "Can you guess|the pepper?"
  },
  {
   "country": "Jamaica",
@@ -1245,7 +1451,9 @@
    "Cocoa",
    "Rice"
   ],
-  "fact": "Blue Mountain coffee is one of the most expensive coffees in the world."
+  "fact": "Blue Mountain coffee is one of the most expensive coffees in the world.",
+  "thumb_title": "The Blue|Mountains",
+  "thumb_hook": "Can you guess|the crop?"
  },
  {
   "country": "Jamaica",
@@ -1257,7 +1465,9 @@
    "Negril",
    "Port Antonio"
   ],
-  "fact": "The falls flow straight into the Caribbean Sea."
+  "fact": "The falls flow straight into the Caribbean Sea.",
+  "thumb_title": "Dunn's River|Falls",
+  "thumb_hook": "Can you guess|the town?"
  },
  {
   "country": "Jamaica",
@@ -1269,7 +1479,9 @@
    "Skiing",
    "Figure skating"
   ],
-  "fact": "Their story inspired the film Cool Runnings."
+  "fact": "Their story inspired the film Cool Runnings.",
+  "thumb_title": "Snow in|Jamaica?!",
+  "thumb_hook": "Can you guess|the sport?"
  },
  {
   "country": "Jamaica",
@@ -1281,7 +1493,9 @@
    "Green, white and red",
    "Black, red and yellow"
   ],
-  "fact": "Jamaica's flag is the only national flag without red, white or blue."
+  "fact": "Jamaica's flag is the only national flag without red, white or blue.",
+  "thumb_title": "Jamaica's|Flag",
+  "thumb_hook": "Can you name|the colors?"
  },
  {
   "country": "Jamaica",
@@ -1293,7 +1507,9 @@
    "Rice and peas",
    "Curry goat"
   ],
-  "fact": "Ackee is a fruit that tastes a bit like scrambled eggs when cooked."
+  "fact": "Ackee is a fruit that tastes a bit like scrambled eggs when cooked.",
+  "thumb_title": "Jamaica's|National Dish",
+  "thumb_hook": "Can you guess|it?"
  },
  {
   "country": "Jamaica",
@@ -1305,7 +1521,9 @@
    "The Inca",
    "The Vikings"
   ],
-  "fact": "Many Jamaican words, like hammock, come from the Taino."
+  "fact": "Many Jamaican words, like hammock, come from the Taino.",
+  "thumb_title": "Jamaica's|First People",
+  "thumb_hook": "Can you name|them?"
  },
  {
   "country": "Jamaica",
@@ -1317,7 +1535,9 @@
    "Gold",
    "Sun"
   ],
-  "fact": "Jamaica has over 100 rivers."
+  "fact": "Jamaica has over 100 rivers.",
+  "thumb_title": "Land of|Wood and...",
+  "thumb_hook": "Can you finish|it?"
  },
  {
   "country": "Jamaica",
@@ -1329,7 +1549,9 @@
    "Papiamento",
    "Haitian Creole"
   ],
-  "fact": "Wah gwaan means what's going on in Patois."
+  "fact": "Wah gwaan means what's going on in Patois.",
+  "thumb_title": "Jamaican|Talk",
+  "thumb_hook": "Can you name|the language?"
  },
  {
   "country": "Jamaica",
@@ -1341,7 +1563,9 @@
    "Nassau",
    "Havana"
   ],
-  "fact": "Port Royal was once called the wickedest city on Earth."
+  "fact": "Port Royal was once called the wickedest city on Earth.",
+  "thumb_title": "The Sunken|Pirate City",
+  "thumb_hook": "Can you name|the city?"
  },
  {
   "country": "South Africa",
@@ -1353,7 +1577,9 @@
    "Durban",
    "Pretoria"
   ],
-  "fact": "Its flat top is often covered by a cloud called the tablecloth."
+  "fact": "Its flat top is often covered by a cloud called the tablecloth.",
+  "thumb_title": "Table|Mountain",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "South Africa",
@@ -1365,7 +1591,9 @@
    "Thabo Mbeki",
    "Jacob Zuma"
   ],
-  "fact": "Nelson Mandela became president in 1994."
+  "fact": "Nelson Mandela became president in 1994.",
+  "thumb_title": "A Nation's|Hero",
+  "thumb_hook": "Can you guess|who?"
  },
  {
   "country": "South Africa",
@@ -1377,7 +1605,9 @@
    "Madagascar",
    "Mauritius"
   ],
-  "fact": "Robben Island is now a museum and UNESCO site."
+  "fact": "Robben Island is now a museum and UNESCO site.",
+  "thumb_title": "Mandela's|Prison",
+  "thumb_hook": "Can you name|the island?"
  },
  {
   "country": "South Africa",
@@ -1389,7 +1619,9 @@
    "Elephant",
    "Leopard"
   ],
-  "fact": "The Big Five are lion, leopard, elephant, rhino and buffalo."
+  "fact": "The Big Five are lion, leopard, elephant, rhino and buffalo.",
+  "thumb_title": "Africa's|Big Five",
+  "thumb_hook": "Can you spot|the odd one?"
  },
  {
   "country": "South Africa",
@@ -1401,7 +1633,9 @@
    "Two",
    "Four"
   ],
-  "fact": "Pretoria, Cape Town and Bloemfontein."
+  "fact": "Pretoria, Cape Town and Bloemfontein.",
+  "thumb_title": "So Many|Capitals!",
+  "thumb_hook": "How many|capitals?"
  },
  {
   "country": "South Africa",
@@ -1413,7 +1647,9 @@
    "Lion",
    "Sunshine"
   ],
-  "fact": "Archbishop Desmond Tutu made the name popular."
+  "fact": "Archbishop Desmond Tutu made the name popular.",
+  "thumb_title": "South Africa's|Nickname",
+  "thumb_hook": "Can you finish|it?"
  },
  {
   "country": "South Africa",
@@ -1425,7 +1661,9 @@
    "7",
    "1"
   ],
-  "fact": "South African Sign Language became the 12th in 2023."
+  "fact": "South African Sign Language became the 12th in 2023.",
+  "thumb_title": "So Many|Languages!",
+  "thumb_hook": "How many|languages?"
  },
  {
   "country": "South Africa",
@@ -1437,7 +1675,9 @@
    "Ferdinand Magellan",
    "Christopher Columbus"
   ],
-  "fact": "He first called it the Cape of Storms."
+  "fact": "He first called it the Cape of Storms.",
+  "thumb_title": "Cape of|Good Hope",
+  "thumb_hook": "Can you guess|the explorer?"
  },
  {
   "country": "South Africa",
@@ -1449,7 +1689,9 @@
    "Rugby World Cup",
    "Cricket World Cup"
   ],
-  "fact": "The final was played at Soccer City in Johannesburg."
+  "fact": "The final was played at Soccer City in Johannesburg.",
+  "thumb_title": "Africa's|First",
+  "thumb_hook": "Can you guess|the event?"
  },
  {
   "country": "South Africa",
@@ -1461,7 +1703,9 @@
    "Wallabies",
    "Lions"
   ],
-  "fact": "The springbok is a fast antelope."
+  "fact": "The springbok is a fast antelope.",
+  "thumb_title": "Rugby|Champions",
+  "thumb_hook": "Can you name|the team?"
  },
  {
   "country": "South Africa",
@@ -1473,7 +1717,9 @@
    "Luau",
    "Asado"
   ],
-  "fact": "South Africa even has a National Braai Day on September 24."
+  "fact": "South Africa even has a National Braai Day on September 24.",
+  "thumb_title": "South African|Barbecue",
+  "thumb_hook": "Do you know|the word?"
  },
  {
   "country": "South Africa",
@@ -1485,7 +1731,9 @@
    "Thabo Mbeki",
    "Jacob Zuma"
   ],
-  "fact": "He fought peacefully against apartheid."
+  "fact": "He fought peacefully against apartheid.",
+  "thumb_title": "Nobel|Peace Prize",
+  "thumb_hook": "Can you guess|who?"
  },
  {
   "country": "South Africa",
@@ -1497,7 +1745,9 @@
    "Dinosaur eggs",
    "Castles"
   ],
-  "fact": "Some fossils found there are millions of years old."
+  "fact": "Some fossils found there are millions of years old.",
+  "thumb_title": "Ancient|Caves",
+  "thumb_hook": "Can you guess|what's found?"
  },
  {
   "country": "South Africa",
@@ -1509,7 +1759,9 @@
    "Oil",
    "Copper"
   ],
-  "fact": "Johannesburg is nicknamed eGoli, the place of gold."
+  "fact": "Johannesburg is nicknamed eGoli, the place of gold.",
+  "thumb_title": "Johannesburg|Rush",
+  "thumb_hook": "Can you guess|what?"
  },
  {
   "country": "Egypt",
@@ -1521,7 +1773,9 @@
    "Colossus of Rhodes",
    "Lighthouse of Alexandria"
   ],
-  "fact": "It is the only one of the Seven Wonders of the Ancient World still standing."
+  "fact": "It is the only one of the Seven Wonders of the Ancient World still standing.",
+  "thumb_title": "Ancient|Wonder",
+  "thumb_hook": "Can you name|it?"
  },
  {
   "country": "Egypt",
@@ -1533,7 +1787,9 @@
    "Cat",
    "Ram"
   ],
-  "fact": "It is one of the largest statues ever carved from one rock."
+  "fact": "It is one of the largest statues ever carved from one rock.",
+  "thumb_title": "The Great|Sphinx",
+  "thumb_hook": "Can you guess|the head?"
  },
  {
   "country": "Egypt",
@@ -1545,7 +1801,9 @@
    "Khufu",
    "Akhenaten"
   ],
-  "fact": "His famous golden mask weighs about 10 kilograms."
+  "fact": "His famous golden mask weighs about 10 kilograms.",
+  "thumb_title": "The Boy|King",
+  "thumb_hook": "Can you guess|who?"
  },
  {
   "country": "Egypt",
@@ -1557,7 +1815,9 @@
    "The Congo",
    "The Niger"
   ],
-  "fact": "The Nile is one of the longest rivers in the world."
+  "fact": "The Nile is one of the longest rivers in the world.",
+  "thumb_title": "River of|Life",
+  "thumb_hook": "Can you name|the river?"
  },
  {
   "country": "Egypt",
@@ -1569,7 +1829,9 @@
    "Cleopatra",
    "Khufu"
   ],
-  "fact": "In the 1960s the temples were moved block by block to save them from a lake."
+  "fact": "In the 1960s the temples were moved block by block to save them from a lake.",
+  "thumb_title": "Abu|Simbel",
+  "thumb_hook": "Can you guess|the pharaoh?"
  },
  {
   "country": "Egypt",
@@ -1581,7 +1843,9 @@
    "Black Stone",
    "Stone of Scone"
   ],
-  "fact": "It has the same text written in three scripts."
+  "fact": "It has the same text written in three scripts.",
+  "thumb_title": "Secret of|Hieroglyphs",
+  "thumb_hook": "Can you name|the stone?"
  },
  {
   "country": "Egypt",
@@ -1593,7 +1857,9 @@
    "Ming",
    "Abbasid"
   ],
-  "fact": "After Cleopatra died in 30 BC, Egypt became part of Rome."
+  "fact": "After Cleopatra died in 30 BC, Egypt became part of Rome.",
+  "thumb_title": "Queen|Cleopatra",
+  "thumb_hook": "Can you guess|the dynasty?"
  },
  {
   "country": "Egypt",
@@ -1605,7 +1871,9 @@
    "Shawarma",
    "Couscous"
   ],
-  "fact": "Koshari is often called Egypt's national dish."
+  "fact": "Koshari is often called Egypt's national dish.",
+  "thumb_title": "Egypt's|Street Food",
+  "thumb_hook": "Can you name|the dish?"
  },
  {
   "country": "Egypt",
@@ -1617,7 +1885,9 @@
    "Siwa Oasis",
    "Alexandria"
   ],
-  "fact": "More than 60 tombs have been found there."
+  "fact": "More than 60 tombs have been found there.",
+  "thumb_title": "Pharaohs'|Resting Place",
+  "thumb_hook": "Can you name|the place?"
  },
  {
   "country": "Egypt",
@@ -1629,7 +1899,9 @@
    "Kiel Canal",
    "Corinth Canal"
   ],
-  "fact": "It opened in 1869 and ships no longer had to sail around Africa."
+  "fact": "It opened in 1869 and ships no longer had to sail around Africa.",
+  "thumb_title": "Two Seas|Connected",
+  "thumb_hook": "Can you name|the canal?"
  },
  {
   "country": "Egypt",
@@ -1641,7 +1913,9 @@
    "Warda",
    "Dalida"
   ],
-  "fact": "Millions across the Arab world listened to her monthly concerts on the radio."
+  "fact": "Millions across the Arab world listened to her monthly concerts on the radio.",
+  "thumb_title": "Star of|the East",
+  "thumb_hook": "Can you guess|who?"
  },
  {
   "country": "Egypt",
@@ -1653,7 +1927,9 @@
    "Mohamed Elneny",
    "Hossam Hassan"
   ],
-  "fact": "Salah became a legend at Liverpool."
+  "fact": "Salah became a legend at Liverpool.",
+  "thumb_title": "The Egyptian|King",
+  "thumb_hook": "Can you guess|who?"
  },
  {
   "country": "Egypt",
@@ -1665,7 +1941,9 @@
    "Luxor",
    "Aswan"
   ],
-  "fact": "A new great library opened there in 2002."
+  "fact": "A new great library opened there in 2002.",
+  "thumb_title": "The Great|Library",
+  "thumb_hook": "Can you guess|the city?"
  },
  {
   "country": "Egypt",
@@ -1677,6 +1955,8 @@
    "Alexandria",
    "Port Said"
   ],
-  "fact": "It was built and expanded over about 2,000 years."
+  "fact": "It was built and expanded over about 2,000 years.",
+  "thumb_title": "Temples of|Karnak",
+  "thumb_hook": "Can you guess|the city?"
  }
 ]

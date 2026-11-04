@@ -17,6 +17,7 @@ COUNTDOWN = 5
 INTRO = 2.5
 CONFIG = json.load(open("config.json")) if os.path.exists("config.json") else {}
 MIN_LEN, MAX_LEN = 20, 40  # video length in seconds
+COVER = 0.6  # seconds the thumbnail shows at the very start
 
 
 def font(size, serif=False):
@@ -105,12 +106,12 @@ def landmark_photo(quiz):
 def background(quiz):
     photo, credit = landmark_photo(quiz)
     if photo is None:
-        return parchment(quiz["number"]), ""
+        return parchment(quiz["number"]), "", None
     img = ImageOps.fit(photo, (W, H), Image.LANCZOS)
     img = ImageEnhance.Brightness(img).enhance(0.8)
     shade = Image.new("RGB", (W, H), (30, 18, 8))
     mask = Image.linear_gradient("L").resize((W, H)).point(lambda p: 150 - p // 3)
-    return Image.composite(shade, img, mask), credit
+    return Image.composite(shade, img, mask), credit, photo
 
 
 def outlined(d, xy, text, f, fill, outline=(60, 30, 10), width=6, anchor="mm"):
@@ -303,7 +304,7 @@ def make_video(quiz, workdir, video_path, thumb_path):
     L, right = LETTERS[answer_idx], options[answer_idx]
 
     # layer 1: the landmark photo (slow cinematic zoom)
-    bg, credit = background(quiz)
+    bg, credit, photo = background(quiz)
     bg.resize((W * 3 // 2, H * 3 // 2), Image.LANCZOS).save(os.path.join(workdir, "bg.png"))
     # layer 2: see-through quiz graphics that change over time
     clear = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -323,10 +324,9 @@ def make_video(quiz, workdir, video_path, thumb_path):
     # layer 3: the monkey host (bobs while talking)
     host = monkey_layer()
     host.save(os.path.join(workdir, "monkey.png"))
-    thumb = bg.convert("RGBA")
-    thumb.alpha_composite(host, ((W - host.width) // 2 - 150, H - host.height))
-    thumb.alpha_composite(layers[1][1])
-    thumb.convert("RGB").save(thumb_path, quality=92)
+    # the channel-style thumbnail (also shown as the first frame, so every app uses it as the cover)
+    from thumbnail import make_thumbnail
+    make_thumbnail(quiz, photo, host, thumb_path)
 
     # the host's lines, like a street interviewer
     c = quiz["country"]
@@ -338,7 +338,7 @@ def make_video(quiz, workdir, video_path, thumb_path):
     intro = max(duration(hook_a) + 0.4, 2.5)
     q_len = duration(q_audio) + 0.4
     a_len = max(duration(a_audio) + 1.2, 4.0, MIN_LEN - (intro + q_len + COUNTDOWN))
-    total = min(intro + q_len + COUNTDOWN + a_len, MAX_LEN)
+    total = min(intro + q_len + COUNTDOWN + a_len, MAX_LEN - COVER)
     t_count, t_ans = intro + q_len, intro + q_len + COUNTDOWN
 
     lst = os.path.join(workdir, "list.txt")
@@ -366,7 +366,19 @@ def make_video(quiz, workdir, video_path, thumb_path):
          "-i", hook_a, "-i", q_audio, "-i", a_audio,
          "-filter_complex", graph, "-map", "[v]", "-map", "[aout]", "-t", f"{total:.2f}",
          "-c:v", "libx264", "-preset", "medium", "-crf", "21", "-c:a", "aac", "-b:a", "160k", "-ar", "44100",
-         "-movflags", "+faststart", video_path])
+         "-movflags", "+faststart", os.path.join(workdir, "main.mp4")])
+    add_cover(thumb_path, os.path.join(workdir, "main.mp4"), video_path)
+
+
+def add_cover(thumb_path, main_path, video_path):
+    """Puts the thumbnail in front of the video for a split second (the cover on TikTok, Reels and Shorts)."""
+    norm = "aformat=sample_rates=44100:channel_layouts=stereo"
+    run(["ffmpeg", "-y", "-loop", "1", "-framerate", "30", "-t", str(COVER), "-i", thumb_path,
+         "-f", "lavfi", "-t", str(COVER), "-i", "anullsrc=r=44100:cl=stereo", "-i", main_path,
+         "-filter_complex", f"[0:v]scale={W}:{H},setsar=1,format=yuv420p[t];[2:v]setsar=1,format=yuv420p[m];"
+                            f"[1:a]{norm}[ta];[2:a]{norm}[ma];[t][ta][m][ma]concat=n=2:v=1:a=1[v][a]",
+         "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-preset", "medium", "-crf", "21",
+         "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", video_path])
 
 
 def main():

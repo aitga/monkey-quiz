@@ -46,16 +46,26 @@ def youtube(v):
     with open(v["video"], "rb") as f:
         out = check(requests.put(r.headers["Location"], data=f, headers={"Authorization": f"Bearer {tok}",
                                                                           "Content-Type": "video/mp4"}))
-    return f"https://youtube.com/shorts/{out['id']}"
+    note = ""
+    thumb = v.get("thumbnail")
+    if thumb and os.path.exists(thumb):
+        with open(thumb, "rb") as f:
+            t = requests.post(f"https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId={out['id']}",
+                              headers={"Authorization": f"Bearer {tok}", "Content-Type": "image/jpeg"}, data=f)
+        note = " (thumbnail set)" if t.status_code < 400 else \
+            " (thumbnail not set: verify your channel at youtube.com/verify)" if "forbidden" in t.text.lower() or t.status_code == 403 \
+            else f" (thumbnail not set: {t.text[:120]})"
+    return f"https://youtube.com/shorts/{out['id']}{note}"
 
 
 # ---------------- Facebook Page ----------------
 def facebook(v):
-    with open(v["video"], "rb") as f:
-        out = check(requests.post(f"https://graph-video.facebook.com/v21.0/{env('META_PAGE_ID')}/videos",
-                                  data={"access_token": env("META_PAGE_TOKEN"), "description": caption(v),
-                                        "title": f"Quiz {v['number']}"},
-                                  files={"source": ("video.mp4", f, "video/mp4")}, timeout=600))
+    files = {"source": ("video.mp4", open(v["video"], "rb"), "video/mp4")}
+    if v.get("thumbnail") and os.path.exists(v["thumbnail"]):
+        files["thumb"] = ("thumb.jpg", open(v["thumbnail"], "rb"), "image/jpeg")
+    out = check(requests.post(f"https://graph-video.facebook.com/v21.0/{env('META_PAGE_ID')}/videos",
+                              data={"access_token": env("META_PAGE_TOKEN"), "description": caption(v),
+                                    "title": f"Quiz {v['number']}"}, files=files, timeout=600))
     return f"https://facebook.com/{out['id']}"
 
 
@@ -63,7 +73,8 @@ def facebook(v):
 def instagram(v):
     token, ig = env("META_PAGE_TOKEN"), env("IG_USER_ID")
     box = check(requests.post(f"{GRAPH}/{ig}/media", data={
-        "media_type": "REELS", "upload_type": "resumable", "caption": caption(v), "access_token": token}))
+        "media_type": "REELS", "upload_type": "resumable", "caption": caption(v), "thumb_offset": "300",
+        "access_token": token}))
     size = os.path.getsize(v["video"])
     with open(v["video"], "rb") as f:
         check(requests.post(f"https://rupload.facebook.com/ig-api-upload/v21.0/{box['id']}", data=f, headers={
@@ -109,7 +120,8 @@ def tiktok(v):
     size = os.path.getsize(v["video"])
     source = {"source": "FILE_UPLOAD", "video_size": size, "chunk_size": size, "total_chunk_count": 1}
     r = requests.post("https://open.tiktokapis.com/v2/post/publish/video/init/", headers=h, json={
-        "post_info": {"title": caption(v)[:2000], "privacy_level": privacy, "disable_comment": False},
+        "post_info": {"title": caption(v)[:2000], "privacy_level": privacy, "disable_comment": False,
+                      "video_cover_timestamp_ms": 300},
         "source_info": source})
     how = f"posted (privacy: {privacy})"
     if "unaudited_client" in r.text:
