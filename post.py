@@ -182,6 +182,9 @@ def main():
     manifest = json.load(open("out/manifest.json"))
     for v in manifest["videos"]:
         for name, fn, needs in PLATFORMS:
+            if name in CONFIG.get("paused", []):
+                results.append((name, v["number"], "⏸️ paused (see config.json)"))
+                continue
             if not have(*needs):
                 results.append((name, v["number"], "⏭️ not connected"))
                 continue
