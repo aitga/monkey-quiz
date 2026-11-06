@@ -136,7 +136,20 @@ def tiktok(v):
             "Content-Type": "video/mp4", "Content-Range": f"bytes 0-{size - 1}/{size}", "Content-Length": str(size)})
     if r.status_code >= 400:
         raise RuntimeError(f"TikTok upload failed: HTTP {r.status_code} {r.text[:200]}")
-    return how
+    # Ask TikTok whether it accepted the video (it checks it for a minute or two after upload)
+    publish_id = data.get("publish_id")
+    status = "unknown"
+    for _ in range(24):
+        time.sleep(10)
+        st = requests.post("https://open.tiktokapis.com/v2/post/publish/status/fetch/", headers=h,
+                           json={"publish_id": publish_id}).json()
+        d = st.get("data", {})
+        status = d.get("status", "unknown")
+        if status == "FAILED":
+            raise RuntimeError(f"TikTok rejected the video: {d.get('fail_reason', st.get('error'))}")
+        if status in ("SEND_TO_USER_INBOX", "PUBLISH_COMPLETE"):
+            return how + " (TikTok confirmed it)"
+    return how + f" (TikTok still checking it, status: {status})"
 
 
 # ---------------- X (Twitter) ----------------
