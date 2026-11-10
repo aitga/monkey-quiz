@@ -31,13 +31,10 @@ jobs:
           echo "## 🎬 Today's videos are ready" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "[Watch them here](${{ steps.upload.outputs.artifact-url }}) (downloads a zip with the videos)." >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "If they look good, click **Review deployments** → tick **approval** → **Approve and deploy**." >> "$GITHUB_STEP_SUMMARY"
 
   post-videos:
     needs: make-videos
     runs-on: ubuntu-latest
-    environment: approval
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
