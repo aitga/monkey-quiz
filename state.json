@@ -1,10 +1,10 @@
 {
-  "next_number": 43,
+  "next_number": 45,
   "country": "Canada",
   "week_started": "2026-11-17",
   "used": {
     "Morocco": 14,
     "USA": 14,
-    "Canada": 2
+    "Canada": 4
   }
 }
